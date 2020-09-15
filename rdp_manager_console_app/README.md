@@ -813,7 +813,7 @@ traders@agco.com ops@agco.com Chief Executive Officer Managing Director, Head of
 
 In this article, we have described how to create a function to get Access Token from RDP and implement a function to retrieve news headlines and get its story content from a News Services using Dart programming. It also provide a sample codes to parse a data returns from the RDP News services. You can add your own method to get additional data from the JSON message.
 
-The library would be used to develop a mobile app in [Part 2](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/rdp_mobile_news_flutter) of this article. In the second part, we will describe how to integrate the functions from the class with a Flutter UI toolkit to create a Mobile app. Users can deploy the app on android or ios and then use the app to log in to the RDP server and retrieve news headlines from user input. Let see the implementation in the second part.
+The library would be used to develop a mobile app in [Part 2](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/tree/master/rdp_mobile_news_flutter) of this article. In the second part, we will describe how to integrate the functions from the class with a Flutter UI toolkit to create a Mobile app. Users can deploy the app on android or ios and then use the app to log in to the RDP server and retrieve news headlines from user input. Let see the implementation in the second part.
 
 ## References
 
