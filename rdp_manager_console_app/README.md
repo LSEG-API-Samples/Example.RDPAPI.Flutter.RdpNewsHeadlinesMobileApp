@@ -49,7 +49,7 @@ Let start creating new dart console app using Visual Studio Code. You can press 
 
 It will ask you to provide a project name and select location to generate the project files. Visual Studio Code will create new console app with a sample codes for you. Then you can modify or delete default files and replace it with our codes.
 
-You can download the whole projects and source files from [Github](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp).It's the project under folder rdp_manager_console_app. You can find RDP Manager class under folder 'lib/rdp'.
+You can download the whole projects and source files from [Github](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp). It's the project under folder rdp_manager_console_app. You can find RDP Manager class under folder 'lib/rdp'.
 
 In this article, we will omit some codes and show you only a snippet of codes required for implement the function.
 
@@ -754,7 +754,7 @@ Please download full projects and source files from [Github](https://github.com/
 
 There are two folder in the git repository. Go to folder __rdp_manager_conosole_app\bin__ first.
 
-You might need to start Terminal and run [pubtool](https://dart.dev/tools/pub/cmd/pub-get) by typing __pub get__ or __flutter pub get__ command to get the libraries required by the app.
+You might need to start Terminal and run [pubtool](https://dart.dev/tools/pub/cmd/pub-get) by typing __pub get__ or __flutter pub get__ command to get dependencies required by the project.
 
 Then modify 'bin/main.dart' and change following lines to your RDP account.
 

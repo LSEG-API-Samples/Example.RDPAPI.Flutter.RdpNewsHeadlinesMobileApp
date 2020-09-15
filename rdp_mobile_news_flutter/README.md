@@ -546,7 +546,7 @@ Please download full source files from [GitHub](https://github.com/Refinitiv-API
 
 ![avdmanager](images/avdmanager.png)
 
-* Open folder __rdp_mobile_news_flutter__ on visual studio codes. Start a new Terminal and go to folder __rdp_mobile_news_flutter__ and type the following command to get the package required for this project.
+* Open folder __rdp_mobile_news_flutter__ on visual studio codes. Start a new Terminal and go to folder __rdp_mobile_news_flutter__ and type the following command to get dependencies required for this project.
 
     ```bash
     flutter pub get
