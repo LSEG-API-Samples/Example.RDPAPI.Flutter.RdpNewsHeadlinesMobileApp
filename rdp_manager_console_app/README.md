@@ -37,7 +37,7 @@ This function will manage to get OAuth2 access token from RDP server. We need to
 
 ## Implementations
 
-Please note that the we ports the application logics to handle the HTTP request and response message from [C# websocket-api example](https://github.com/Refinitiv/websocket-api/tree/master/Applications/Examples/EDP/CSharp) provided on github.
+Please note that the we ports the application logics to handle the HTTP request and response message from [C# websocket-api example](https://github.com/Refinitiv/websocket-api/tree/master/Applications/Examples/EDP/CSharp) provided on [Github](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp).
 
 Let start creating new dart console app using Visual Studio Code. You can press Ctrl+Shift+p (on windows) and then type 'Dart' and select __Dart:New Project__ as below screen shot.
 
@@ -49,7 +49,7 @@ Let start creating new dart console app using Visual Studio Code. You can press 
 
 It will ask you to provide a project name and select location to generate the project files. Visual Studio Code will create new console app with a sample codes for you. Then you can modify or delete default files and replace it with our codes.
 
-You can download the whole projects and source files from Github.It's the project under folder rdp_manager_console_app. You can find RDP Manager class under folder 'lib/rdp'.
+You can download the whole projects and source files from [Github](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp).It's the project under folder rdp_manager_console_app. You can find RDP Manager class under folder 'lib/rdp'.
 
 In this article, we will omit some codes and show you only a snippet of codes required for implement the function.
 
@@ -750,7 +750,7 @@ Next step, pass the Access Token to the getNewsHeadlines function and getNewsSto
 
 ### Running the app
 
-Please download full projects and source files from Github.
+Please download full projects and source files from [Github](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp).
 
 There are two folder in the git repository. Go to folder __rdp_manager_conosole_app\bin__ first.
 

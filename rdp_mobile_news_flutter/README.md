@@ -40,7 +40,7 @@ We will map the three functions to the following mobile pages.
 
 Let see how to use Flutter to create UI for each page in the next steps. We will create a new Flutter app using Visual Code. We can press Ctrl+Shift+p and then type Flutter and select FLutter: New Project, then type a project name and choose a location to generate the project. Then the Visual Studio Code will create a new project and generate default pages and folders for you.
 
-You can download the whole project with source files from Github. And then find a Flutter project under folder rdp_mobile_news_flutter. We copied the folder 'rdp' from rdp_manager_console_app/lib, which is a dart application from Part1. Then we will put the files under the lib folder so we can use it later in the Flutter project.
+You can download the whole project with source files from [Github](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp). And then find a Flutter project under folder rdp_mobile_news_flutter. We copied the folder 'rdp' from rdp_manager_console_app/lib, which is a dart application from Part1. Then we will put the files under the lib folder so we can use it later in the Flutter project.
 
 ![create_new_flutter_app](images/create_flutter_app.png)
 
@@ -540,7 +540,7 @@ The below screenshot is a sample of the NewsStory page, and the blue button at t
 
 ## Build and Run the Flutter Mobile App
 
-Please download full source files from GitHub.
+Please download full source files from [GitHub](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp).
 
 * First of all, please ensure that you have followed the guide from the Flutter dev page to setup Visual Studio Code Flutter plugin and create. You can make Android Virtual Device using the avd manager in Android Studio.
 

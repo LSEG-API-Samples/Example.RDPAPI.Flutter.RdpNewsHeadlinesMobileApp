@@ -8,3 +8,5 @@ This example consists of two folders. Each folder is a separate project.
 
 * The second project is RDP News headlines Mobile application
 It's the project under folder [rdp_mobile_news_flutter](rdp_mobile_news_flutter/) which is a mobile app created by using Google Flutter UI Toolkit and utilizes the dart library crated in the console app to retrieve data from the RDP server and display the news headlines and story content on Mobile UI. Users can test the app using Android Emulator or using ios emulator on macOS.
+
+![screenshot](rdp_manager_console_app/images/coverpage_white_blue.png)
