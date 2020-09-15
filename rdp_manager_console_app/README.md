@@ -6,7 +6,7 @@ This article demonstrates use-cases and workflows for building a mobile applicat
 
 To create a mobile UI, we will use [Flutter UI toolkit](https://flutter.dev/) to build the app. Flutter can be natively compiled applications for mobile, web, and desktop from a single codebase. It is a free and open-source Google mobile UI framework that provides a fast and expressive way for developers to build native apps on both IOS and Android. You can also test the app on the Android emulator and ios emulator (macOS).
 
-There are two parts for this article and this one is the first part to demonstrate how to use dart programming to create a class for retrieving News headlines data from RDP News services. The outcome from this article is a Dart library with a sample console app to test the functionality. The class will be used in the Mobile UI which is [Part 2](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/rdp_mobile_news_flutter) of this article.
+There are two parts for this article and this one is the first part to demonstrate how to use dart programming to create a class for retrieving News headlines data from RDP News services. The outcome from this article is a Dart library with a sample console app to test the functionality. The class will be used in the Mobile UI which is [Part 2](https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/tree/master/rdp_mobile_news_flutter) of this article.
 
 Below is a screenshot of the Flutter mobile app page break down by the use-case. We need to create a dart library to support these functions.
 
