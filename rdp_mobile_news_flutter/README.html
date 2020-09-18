@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="build-news-headlines-mobile-app-using-flutter-and-rdp-api-part-2">Build News Headlines Mobile app using Flutter and RDP API (Part 2)</h1>
+<h2 id="create-flutter-mobile-ui">Create Flutter Mobile UI</h2>
+<p>There are two parts of the article, and this is part2 to create a mobile demo app using the Flutter UI toolkit. Flutter is a free and open-source Google mobile UI framework that provides a fast and expressive way for developers to build native apps on both IOS and Android. We will use it to create UI to shows a News headline and story content from <a href="https://developers.refinitiv.com/refinitiv-data-platform">Refinitiv Data Platform(RDP)</a>. There will be three main UI pages in the mobile application that are a page to get login from the user, a page to search and display a list of news headlines, and a page to show a news story. Each page will use functions from the RDP Manager class, which created in <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/tree/master/rdp_manager_console_app">Part1</a> to handle login and retrieve data.</p>
+<h2 id="prerequisite">Prerequisite</h2>
+<ul>
+<li>
+<p>Understand a basic concept of RDP and RDP REST API. We recommend you to read <a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis/docs?content=72067&amp;type=documentation_item">RDP API GENERAL GUIDELINES</a>. You can also test your RDP account with <a href="https://apidocs.refinitiv.com/Apps/ApiDocs">API Playground</a> to understand the HTTP request and response messages the application has to send and receive.</p>
+</li>
+<li>
+<p>Read <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/rdp_manager_console_app">Part1</a> of this article. You need to understand the functionality of the RDP Manager class. We need to use the functions to retrieve data in the Mobile app.</p>
+</li>
+<li>
+<p>Install Flutter and Dart. To build and run the sample application, you can follow instructions from <a href="https://flutter.dev/docs/get-started/install">Flutter dev</a> page to setup Flutter on Windows or macOS. You also need to install <a href="https://developer.android.com/studio">Android Studio</a> as we need to use an Android emulator to test the Flutter app. Please understand the basic usage of the Dart programming language and Flutter. There are many useful articles internet, and you can also learn primary uses of Dart and Flutter from the Flutter developer site.</p>
+</li>
+<li>
+<p><a href="https://code.visualstudio.com/">Visual Studio Code(VS Code)</a>. You can follow the setting from the Flutter Dev Getting start page to add the Flutter plugin to the visual studio code. Then you can use it to create a new project, write the codes, debug and then build and run the app on the emulator.</p>
+</li>
+<li>
+<p>A valid RDP account with permission to retrieve news headlines and stories from RDP News services.</p>
+</li>
+</ul>
+<h2 id="create-mobile-ui">Create Mobile UI</h2>
+<p>There are three main functions from the RDP Manager class that we need to use in the Flutter Mobile app.</p>
+<ol>
+<li>Function to handle RDP Login.</li>
+<li>Function to search headlines from User input query or keyword. It will return a list of headlines with associated story id.</li>
+<li>Function to shows a News story content from a story id.</li>
+</ol>
+<p>We will map the three functions to the following mobile pages.</p>
+<p><img src="images/coverpage_white_blue.png" alt="cover"></p>
+<ul>
+<li>
+<p><strong>Login</strong> pages is a page to get a username, password, and client id or app key from user input. It will call function <strong>getAuthenticationInfo</strong> from RDPManager class to get Access Token from the server or shows the error message to the Login page when the login failed.</p>
+</li>
+<li>
+<p><strong>News Headlines</strong> page is a default main page to shows after a user gets login success. It will display a list of headlines based on the search result from a pre-defined query or keyword. It will call function <strong>getNewsHeadlines</strong> from RDPManager class to get a list of headlines.</p>
+</li>
+<li>
+<p><strong>Search</strong> page is page that shows a result from <strong>getNewsHeadlines</strong>. When the user presses a search icon which locates at the left top of the default main page. The app will show a text box to get input from the user. Users can type a keyword and submit a search query.</p>
+</li>
+<li>
+<p><strong>News Story</strong> page is a page that shows a News headlines text and its story content based on the story id, which the user selected from one of the news headlines.</p>
+</li>
+</ul>
+<h3 id="flutter-implementations">Flutter Implementations</h3>
+<p>Let see how to use Flutter to create UI for each page in the next steps. We will create a new Flutter app using Visual Code. We can press Ctrl+Shift+p and then type Flutter and select FLutter: New Project, then type a project name and choose a location to generate the project. Then the Visual Studio Code will create a new project and generate default pages and folders for you.</p>
+<p>You can download the whole project with source files from <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">Github</a>. And then find a Flutter project under folder rdp_mobile_news_flutter. We copied the folder 'rdp' from rdp_manager_console_app/lib, which is a dart application from Part1. Then we will put the files under the lib folder so we can use it later in the Flutter project.</p>
+<p><img src="images/create_flutter_app.png" alt="create_new_flutter_app"></p>
+<h4 id="building-login-page"><strong>Building Login Page</strong></h4>
+<p>We start by creating the LoginScreen page using StatefulWidget. Find below codes for a snippet of codes to create the page and formatting the colors. Note that we omit a function start with _build, which is functions to create TextField and Button to get input from a user. You can see more details from __rdp_mobile_news_flutter\pages\rdp_log</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoginScreen</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatefulWidget</span> </span>{
+  <span class="hljs-meta">@override</span>
+  _LoginScreenState createState() =&gt; _LoginScreenState();
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">_LoginScreenState</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">State</span>&lt;<span class="hljs-title">LoginScreen</span>&gt; </span>{
+  <span class="hljs-comment">// TextEdit contrller to hold a user input values for each TextBox.</span>
+  <span class="hljs-keyword">final</span> usernameController = TextEditingController();
+  <span class="hljs-keyword">final</span> passwordController = TextEditingController();
+  <span class="hljs-keyword">final</span> appKeyController = TextEditingController();
+  <span class="hljs-keyword">final</span> loginErrorController = TextEditingController();
+  <span class="hljs-comment">//... functions _buildXXX to create Text fields and button</span>
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> WillPopScope(
+        onWillPop: () <span class="hljs-keyword">async</span> =&gt; <span class="hljs-keyword">false</span>,
+        child: Scaffold(
+          body: AnnotatedRegion&lt;SystemUiOverlayStyle&gt;(
+            value: SystemUiOverlayStyle.dark,
+            child: GestureDetector(
+              onTap: () =&gt; FocusScope.of(context).unfocus(),
+              child: Stack(
+                children: &lt;Widget&gt;[
+                  Container(
+                    height: <span class="hljs-built_in">double</span>.infinity,
+                    width: <span class="hljs-built_in">double</span>.infinity,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(<span class="hljs-number">0xFF001EFF</span>),
+                          Color(<span class="hljs-number">0xFF1C19BD</span>),
+                          Color(<span class="hljs-number">0xFF121491</span>),
+                          Color(<span class="hljs-number">0xFF0E0750</span>),
+                        ],
+                        stops: [<span class="hljs-number">0.3</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">0.9</span>],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: <span class="hljs-built_in">double</span>.infinity,
+                    child: SingleChildScrollView(
+                      physics: AlwaysScrollableScrollPhysics(),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: <span class="hljs-number">40.0</span>,
+                        vertical: <span class="hljs-number">120.0</span>,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: &lt;Widget&gt;[
+                          Text(
+                            <span class="hljs-string">'Log In'</span>,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: <span class="hljs-string">'Arial'</span>,
+                              fontSize: <span class="hljs-number">30.0</span>,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: <span class="hljs-number">30.0</span>),
+                          _buildUsernameTextField(),
+                          SizedBox(
+                            height: <span class="hljs-number">30.0</span>,
+                          ),
+                          _buildPasswordTextField(),
+                          _buildAppKeyTextField(),
+                          _buildErrorTextField(),
+                          _buildLoginBtn()
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ));
+  }
+}
+
+</div></code></pre>
+<p>The Flutter codes will generate the following sample Login page when running on the Android emulator.</p>
+<p><img src="images/login_screen.png" alt="loginscreen"></p>
+<p>Next steps, we will add the rdpMgr object, which is the RdpManager class, to the LoginScreen page.</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoginScreen</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatefulWidget</span> </span>{
+  <span class="hljs-keyword">final</span> rdp.RdpManager rdpMgr = rdp.RdpManager();
+  <span class="hljs-meta">@override</span>
+  _LoginScreenState createState() =&gt; _LoginScreenState();
+}
+</div></code></pre>
+<p>And then calls <strong>getAuthenticationInfo</strong> to log in to the RDP server when the user press a LOGIN button. There is an implementation of onPressed callback implemented in the _buildLoginButton method.</p>
+<pre class="hljs"><code><div>Widget _buildLoginBtn() {
+    <span class="hljs-keyword">return</span> Container(
+      padding: EdgeInsets.symmetric(vertical: <span class="hljs-number">25.0</span>),
+      width: <span class="hljs-built_in">double</span>.infinity,
+      child: RaisedButton(
+        <span class="hljs-comment">//...,</span>
+        onPressed: () <span class="hljs-keyword">async</span> {
+          <span class="hljs-keyword">if</span> (!onLogin) {
+            <span class="hljs-comment">//... codes to update component state</span>
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">'Login Button Pressed'</span>);
+            widget.rdpMgr.userName = usernameController.text;
+            widget.rdpMgr.userPassword = passwordController.text;
+            widget.rdpMgr.clientId = appKeyController.text;
+            <span class="hljs-keyword">var</span> tokenResp = <span class="hljs-keyword">await</span> widget.rdpMgr.getAuthenticationInfo(<span class="hljs-keyword">false</span>);
+            <span class="hljs-comment">// Check the login status and redirect to news headlines main page.</span>
+            <span class="hljs-keyword">if</span> (tokenResp.statusCode == <span class="hljs-number">200</span>) {
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =&gt;
+                        RdpNewsMainPage(myTimer, widget.rdpMgr)),
+              );
+            }<span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">var</span> errorMsg = <span class="hljs-string">''</span>;
+                <span class="hljs-keyword">if</span> (tokenResp.errorType != <span class="hljs-keyword">null</span>)
+                  errorMsg = <span class="hljs-string">'<span class="hljs-subst">${tokenResp.errorType}</span>:'</span>;
+
+                <span class="hljs-keyword">if</span> (tokenResp.errorDescription != <span class="hljs-keyword">null</span>)
+                  errorMsg = <span class="hljs-string">'<span class="hljs-subst">$errorMsg</span> <span class="hljs-subst">${tokenResp.errorDescription}</span>'</span>;
+                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tokenResp.reasonPhase != <span class="hljs-keyword">null</span>)
+                  errorMsg = <span class="hljs-string">'<span class="hljs-subst">$errorMsg</span> <span class="hljs-subst">${tokenResp.reasonPhase}</span>'</span>;
+                loginErrorController.text = errorMsg;
+            }
+          }
+            <span class="hljs-comment">//... codes to set update state to shows error</span>
+</div></code></pre>
+<p>The application will get an object <strong>tokenResp</strong> back from getAuthenticationInfo. Then it needs to check the status code if it's 200, it implies that login is success and redirect the page to a News Headlines main page using <strong>Navigator.push</strong>, otherwise, it will show the message to the error text box like the below sample, which is a scenario that the user inputs incorrect username or password.</p>
+<p><img src="images/login_error_sample.png" alt="login error"></p>
+<h4 id="building-news-headlines-main-page"><strong>Building News Headlines main page</strong></h4>
+<p>Next steps, we will create the main page to shows a list of News headlines from News services. The following screenshot is an output for the page.</p>
+<p><img src="images/news_headlines_main.png" alt="news headline main"></p>
+<p>This page also provides a small floating button at the center bottom position of the page. When users click this button, it will call getNewsHeadlines to fetch additional News headlines with the same search context and then add it to the current headline list. If you can remember from Part1 of this article, there is an option for the user to use a Query parameter named <strong>Cursor</strong>, which is a pagination cursor to request data. The application will pass a value of <strong>next</strong> node provided in the below sample JSON response message instead of using a search query.</p>
+<pre class="hljs"><code><div> <span class="hljs-string">"meta"</span>: {
+    <span class="hljs-attr">"count"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"pageLimit"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"next"</span>: <span class="hljs-string">"H4sIAAAAAAAAABWNywrCMBAA/2WvVkjEgo2nguDJCrWexENotxpYk5KkL0r/3e1x9jGzQGsooge1QJw7BAWtR4w4RUhg0NRvo+cjZ2pJfwKoF3xRN2QswntN4Ken2vU2gpIigc4MLm4yi2MwDf/KNMtOMhVHcRCpLcq8Hme04+7ALDIpz2J/yatbVXLBhGILK4ieuywPzm/IssrdqeETj4SDtjVeves73mkiWP/ASLWpxwAAAA=="</span>,
+    <span class="hljs-attr">"prev"</span>: <span class="hljs-string">"H4sIAAAAAAAAABWOQQuCQBCF/8tcM1gLqbVTIAQejMpO0WHRMZemXdldzRD/e+PlwZs3882boNEU0EE6Qfh1CCk0DjHgGCCCQVG/jO63I7uG1MtD+oAWVU3aIDznCD5qrGxvAqSxiKDTgw0LzODX65pv40TKPUuyE8nWZPlVXqqyfa82YiOEjOODWGd5wXjti+UrF1DkERjtrVs8o0p7ppp3HBIOylR4crbvOFNEMP8BPZN3Z8UAAAA="</span>
+  }
+</div></code></pre>
+<p>Let start by creating StatefulWidget to hold the main page. Below is a class RdpNewsMainPage. It also has a rdpManager object, which keeps a reference of RdpManager from the Login page. The Login page has to pass this object to the constructor of RdpMainPage when calling Navigator.push. You can find full source files from 'pages/rdp_news_mainpage.dart'.</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RdpNewsMainPage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatefulWidget</span> </span>{
+  <span class="hljs-keyword">final</span> Timer myTimer;
+  <span class="hljs-keyword">final</span> rdp.RdpManager rdpManager;
+  <span class="hljs-keyword">final</span> GlobalKey&lt;ScaffoldState&gt; _scaffoldKey = GlobalKey&lt;ScaffoldState&gt;();
+
+  <span class="hljs-meta">@override</span>
+  State&lt;StatefulWidget&gt; createState() =&gt; _RdpNewsMainPage();
+  RdpNewsMainPage(<span class="hljs-keyword">this</span>.myTimer, <span class="hljs-keyword">this</span>.rdpManager);
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">_RdpNewsMainPage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">State</span>&lt;<span class="hljs-title">RdpNewsMainPage</span>&gt; </span>{
+    <span class="hljs-built_in">List</span>&lt;rdpMsgData.NewContents&gt; newsContentList =
+      <span class="hljs-keyword">new</span> <span class="hljs-built_in">List</span>&lt;rdpMsgData.NewContents&gt;();
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> WillPopScope(
+        onWillPop: () <span class="hljs-keyword">async</span> =&gt; <span class="hljs-keyword">false</span>,
+        child: Scaffold(
+            key: widget._scaffoldKey,
+            bottomNavigationBar: _buildBottomNavigationTab(),
+            floatingActionButton: Visibility(
+                visible: expandMoreHeadlines,
+                child: FloatingActionButton(
+                    backgroundColor: Color(<span class="hljs-number">0xFFFF5000</span>),
+                    onPressed: () {
+                      <span class="hljs-keyword">if</span> (expandMoreHeadlines) {
+                        setState(() {
+                          expandMoreHeadlines = <span class="hljs-keyword">false</span>;
+                          expandMoreItem = BottomNavigationBarItem(
+                              icon: Icon(Icons.expand_more), title: Text(<span class="hljs-string">''</span>));
+                        });
+                        _fetchMoreHeadlines();
+                      }
+                    },
+                    child: Icon(Icons.expand_more))),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
+            appBar: _buildAppBar(context),
+            body: !isLoading
+                ? NewsHeadlineFeeds(
+                    newsHeadlinesList: <span class="hljs-keyword">this</span>.newsContentList,
+                    rdpManager: widget.rdpManager,
+                    mainScaffoldKey: widget._scaffoldKey,
+                    onLoadingStory: _onLoadingStory,
+                  )
+                : Center(child: CircularProgressIndicator())));
+  }
+</div></code></pre>
+<p>To fetch news headlines, we create a separate method named _fetchNewsHeadlines to retrieve the data and cache it in newsContentList, which is a List&lt;rdpMsgData.NewContents&gt;. So we can re-use it later in another use-case. We also create a method named _<strong>fetchMoreHeadlines</strong> to use the pagination cursor described in the previous section. It just calls _fetchNewsHeadlines and set useCursor to true to use a cursor mode.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">void</span> _fetchNewsHeadlines(<span class="hljs-built_in">String</span> keyword, <span class="hljs-built_in">bool</span> clearList,
+      [<span class="hljs-built_in">bool</span> useCursor, <span class="hljs-built_in">String</span> nextCursor]) <span class="hljs-keyword">async</span> {
+    <span class="hljs-keyword">this</span>._keyword = keyword;
+    <span class="hljs-keyword">if</span> (clearList) newsContentList.clear();
+    setState(() =&gt; {isLoading = <span class="hljs-keyword">true</span>});
+
+    <span class="hljs-keyword">var</span> tokenData = widget.rdpManager.accessTokenInfo;
+    <span class="hljs-keyword">if</span> (widget.rdpManager.accessTokenInfo != <span class="hljs-keyword">null</span>) {
+      <span class="hljs-keyword">var</span> headlinesResp;
+      <span class="hljs-comment">//use cursor or use query</span>
+      <span class="hljs-keyword">if</span> (nextCursor != <span class="hljs-keyword">null</span> &amp;&amp; useCursor &amp;&amp; nextCursor.isNotEmpty)
+        headlinesResp = <span class="hljs-keyword">await</span> widget.rdpManager
+            .getNewsHeadlines(tokenData, cursor: nextCursor);
+      <span class="hljs-keyword">else</span>
+        headlinesResp =
+            <span class="hljs-keyword">await</span> widget.rdpManager.getNewsHeadlines(tokenData, query: keyword);
+
+      <span class="hljs-keyword">if</span> (headlinesResp.statusCode == <span class="hljs-number">200</span>) {
+        <span class="hljs-comment">// Get next Cursor</span>
+        <span class="hljs-keyword">this</span>.nextCursor = headlinesResp.metaInfo.next;
+        <span class="hljs-comment">// Add headlines to the list</span>
+        headlinesResp.headlinesDatas.forEach((data) <span class="hljs-keyword">async</span> {
+          <span class="hljs-built_in">bool</span> containObj = <span class="hljs-keyword">false</span>;
+          <span class="hljs-comment">// If the list does not contains story id, add it. Otherwise skip</span>
+          <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; newsContentList.length; i++) {
+            <span class="hljs-keyword">if</span> (newsContentList[i].storyId == data.storyId) {
+              containObj = <span class="hljs-keyword">true</span>;
+              <span class="hljs-keyword">break</span>;
+            }
+          }
+          <span class="hljs-keyword">if</span> (!containObj) {
+            <span class="hljs-keyword">var</span> content = rdpMsgData.NewContents();
+            content.headlines = data.titleText;
+            content.storyId = data.storyId;
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">'Add headline:&gt;&gt; <span class="hljs-subst">${data.titleText}</span> <span class="hljs-subst">${data.storyId}</span>'</span>);
+            content.storyData = <span class="hljs-string">''</span>;
+            newsContentList.add(content);
+          } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"Found duplicate storyId: <span class="hljs-subst">${data.storyId}</span> skip it"</span>);
+          }
+        });
+       <span class="hljs-comment">//... more codes to handle ui logics</span>
+      } <span class="hljs-keyword">else</span> {
+        _backToLogin(context);
+        <span class="hljs-keyword">return</span>;
+      }
+      setState(() =&gt; {isLoading = <span class="hljs-keyword">false</span>});
+    } <span class="hljs-keyword">else</span> {
+      _backToLogin(context);
+      <span class="hljs-keyword">return</span>;
+    }
+  }
+}
+
+<span class="hljs-keyword">void</span> _fetchMoreHeadlines() {
+    <span class="hljs-keyword">if</span> (!isLoading) {
+      widget._scaffoldKey.currentState.showSnackBar(SnackBar(
+        content: Text(<span class="hljs-string">'Loading more news...'</span>),
+      ));
+      <span class="hljs-built_in">print</span>(<span class="hljs-string">'Next =&gt;<span class="hljs-subst">${<span class="hljs-keyword">this</span>.nextCursor}</span>'</span>);
+      _fetchNewsHeadlines(_keyword, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">true</span>, <span class="hljs-keyword">this</span>.nextCursor);
+      widget._scaffoldKey.currentState.hideCurrentSnackBar();
+    }
+  }
+</div></code></pre>
+<p>To fetch a news headlines to the default main page. The application will call _fetchNewsHeadlines in method <strong>initState</strong> which is a method that applicaiton has to call before render the page. We will add_defaultQuery variable to keep an application default search text. You can change it to a keyword you want to search.</p>
+<pre class="hljs"><code><div> <span class="hljs-meta">@override</span>
+  <span class="hljs-keyword">void</span> initState() {
+    <span class="hljs-keyword">super</span>.initState();
+    _fetchNewsHeadlines(_defaultQuery, <span class="hljs-keyword">true</span>);
+  }
+
+</div></code></pre>
+<h4 id="add-search-bar-to-appbar"><strong>Add Search bar to AppBar</strong></h4>
+<p>There is a search icon at the top-left position of the page. The application will show the search bar at the place of AppBar, so we will add a function <em>buildAppBar</em>_ to re-create AppBar to the main page.</p>
+<pre class="hljs"><code><div>appBar: _buildAppBar(context),
+</div></code></pre>
+<p>It will generate search bar like following screenshot.</p>
+<p><img src="images/search_tab.png" alt="search_tab"></p>
+<p>Below is a snippet code to re-create AppBar and call _fetchNewsHeadlines after user type search keyword and press submit.</p>
+<pre class="hljs"><code><div>Widget _buildAppBar(BuildContext context) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AppBar(
+      centerTitle: <span class="hljs-keyword">true</span>,
+      backgroundColor: Color(<span class="hljs-number">0xFF001EFF</span>),
+      title: <span class="hljs-keyword">this</span>._appBarTitle,
+      leading: <span class="hljs-keyword">new</span> IconButton(
+        icon: _searchIcon,
+        onPressed: (() {
+          _searchPressed(context);
+          _searchBarFocusNode.requestFocus();
+        }),
+      ),
+    );
+  }
+
+  <span class="hljs-keyword">void</span> _searchPressed(BuildContext context) <span class="hljs-keyword">async</span> {
+    setState(() {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._searchIcon.icon == Icons.search) {
+        <span class="hljs-keyword">this</span>._searchIcon = <span class="hljs-keyword">new</span> Icon(Icons.close);
+        <span class="hljs-keyword">this</span>._appBarTitle = <span class="hljs-keyword">new</span> TextField(
+          style: wbLabelStyle,
+          focusNode: _searchBarFocusNode,
+          controller: _filter,
+          decoration: <span class="hljs-keyword">new</span> InputDecoration(
+              prefixIcon: <span class="hljs-keyword">new</span> Icon(Icons.search), hintText: <span class="hljs-string">'Search...'</span>),
+          onSubmitted: (data) {
+            <span class="hljs-keyword">if</span> (data != <span class="hljs-keyword">null</span> &amp;&amp; data.isNotEmpty) {
+              _fetchNewsHeadlines(data, <span class="hljs-keyword">true</span>);
+              <span class="hljs-keyword">this</span>._searchIcon = <span class="hljs-keyword">new</span> Icon(Icons.search);
+              <span class="hljs-keyword">this</span>._appBarTitle = <span class="hljs-keyword">new</span> Text(<span class="hljs-string">'News Headlines'</span>);
+              _filter.clear();
+            }
+          },
+        );
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>._searchIcon = <span class="hljs-keyword">new</span> Icon(Icons.search);
+        <span class="hljs-keyword">this</span>._appBarTitle = <span class="hljs-keyword">new</span> Text(<span class="hljs-string">'News Headlines'</span>);
+        _filter.clear();
+      }
+    });
+  }
+</div></code></pre>
+<h4 id="generate-news-headlines-contents">Generate News Headlines contents</h4>
+<p>As we have explained earlier, that application will cache a result of the search function in the newsContentList object. The main body of the page consists of another StatefulWidget named NewsHeadlineFeeds that application used to display headlines content. The main page has a logics to wait for the search result before update the data in the widget, and below is a code from a build function.</p>
+<pre class="hljs"><code><div>        body: !isLoading
+                ? NewsHeadlineFeeds(
+                    newsHeadlinesList: <span class="hljs-keyword">this</span>.newsContentList,
+                    rdpManager: widget.rdpManager,
+                    mainScaffoldKey: widget._scaffoldKey,
+                    onLoadingStory: _onLoadingStory,
+                  )
+                : Center(child: CircularProgressIndicator());
+</div></code></pre>
+<p>Let see more details of NewsHeadlineFeeds widget from 'pages/rdp_news_feed.dart'. It uses ListView and ListTile with Card widget to build and display a list of headlines Title.</p>
+<p>Once the user clicks one of the news headlines, the application will get the onTap event. Then we can get the index from itemBuilder, and we can use it to access headline and story id from the newsHeadlinesList object from the main page. We need to pass a story id to <strong>rdpManager.getNewsStory</strong> function to retrieve a News Story content. Next step, the app will pass data to NewsStory page and call Navigator.push to open the page.</p>
+<p>The following codes are a build method from NewsHeadlineFeeds class.</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NewsHeadlineFeeds</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatefulWidget</span> </span>{
+  <span class="hljs-comment">///<span class="markdown">... declared more variable here</span></span>
+  <span class="hljs-meta">@override</span>
+  _NewsHeadlineFeedsState createState() =&gt; _NewsHeadlineFeedsState();
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">_NewsHeadlineFeedsState</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">State</span>&lt;<span class="hljs-title">NewsHeadlineFeeds</span>&gt; </span>{
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> ListView.builder(
+      padding: EdgeInsets.all(<span class="hljs-number">8</span>),
+      itemCount: <span class="hljs-keyword">this</span>.widget.newsHeadlinesList.length,
+      itemBuilder: (BuildContext context, <span class="hljs-built_in">int</span> index) {
+        <span class="hljs-keyword">return</span> Card(
+          elevation: <span class="hljs-number">4</span>,
+          child: ListTile(
+            onTap: () <span class="hljs-keyword">async</span> {
+               <span class="hljs-comment">/// <span class="markdown">Show snackbar</span></span>
+              <span class="hljs-comment">// Get News Story content</span>
+              <span class="hljs-keyword">var</span> storyResp = <span class="hljs-keyword">await</span> widget.rdpManager.getNewsStory(
+                  widget.rdpManager.accessTokenInfo,
+                  widget.newsHeadlinesList[index].storyId);
+
+              <span class="hljs-comment">// Verify if the response is Ok and then update a news story in the cache.</span>
+              <span class="hljs-keyword">if</span> (storyResp.statusCode == <span class="hljs-number">200</span>) {
+                widget.newsHeadlinesList[index].storyData =
+                    storyResp.newsContent.newsContent;
+              }
+
+              <span class="hljs-comment">// Generate Html data to display on news detals page.</span>
+              <span class="hljs-keyword">var</span> stringHtml = _generateHtmlContent(
+                  widget.newsHeadlinesList[index].headlines,
+                  widget.newsHeadlinesList[index].storyData);
+
+              <span class="hljs-comment">// Hide the message on SnackBar</span>
+              widget.mainScaffoldKey.currentState.removeCurrentSnackBar();
+              widget.onLoadingStory(<span class="hljs-keyword">false</span>);
+              <span class="hljs-comment">// Shows the Story page, passing news headline with news body to the page.</span>
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =&gt; NewsStory(
+                          newsTitle: widget.newsHeadlinesList[index].headlines,
+                          newsDetail: stringHtml,
+                        )),
+              );
+            },
+            title: Text(
+              widget.newsHeadlinesList[index].headlines,
+              style: TextStyle(fontSize: <span class="hljs-number">16</span>, fontWeight: FontWeight.bold),
+              maxLines: <span class="hljs-number">3</span>,
+            ),
+            <span class="hljs-comment">/// <span class="markdown">set icons here</span></span>
+          ),
+        );
+      },
+    );
+</div></code></pre>
+<h4 id="create-newsstory-page">Create NewsStory page</h4>
+<p>The last widget we will create for this project is a NewsStory page, which is a Stateless widget that required two arguments when creating the widget that is newsTitle and newsDetails. The widget will use the Flutter Html widget to shows the story; therefore, we need to import flutter_html.dart to the codes in 'pages/rdp_news_details.dart'.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> <span class="hljs-string">'package:flutter_html/flutter_html.dart'</span>
+</div></code></pre>
+<p>Users can click a FloatingActionButton to close the page. It will return to News Headlines main page. And below is a snippet code from the NewsStory class.</p>
+<pre class="hljs"><code><div><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NewsStory</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatelessWidget</span> </span>{
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> newsTitle;
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> newsDetail;
+  NewsStory({Key key, <span class="hljs-meta">@required</span> <span class="hljs-keyword">this</span>.newsTitle, <span class="hljs-meta">@required</span> <span class="hljs-keyword">this</span>.newsDetail})
+      : <span class="hljs-keyword">super</span>(key: key);
+
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> Scaffold(
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.close)),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      appBar: AppBar(
+        backgroundColor: Color(<span class="hljs-number">0xFF001EFF</span>),
+        automaticallyImplyLeading: <span class="hljs-keyword">false</span>,
+        title: Text(
+          newsTitle,
+        ),
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Card(
+            elevation: <span class="hljs-number">3</span>,
+            child: ListTile(
+              subtitle: Container(
+                padding: EdgeInsets.all(<span class="hljs-number">4</span>),
+                child: Html(
+                  data: newsDetail,
+                  renderNewlines: <span class="hljs-keyword">true</span>,
+                  defaultTextStyle: TextStyle(fontSize: <span class="hljs-number">14</span>),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</div></code></pre>
+<p>The below screenshot is a sample of the NewsStory page, and the blue button at the bottom center is a FloatingActionButton to close the page.</p>
+<p><img src="images/story_page.png" alt="newsstory"></p>
+<h2 id="build-and-run-the-flutter-mobile-app">Build and Run the Flutter Mobile App</h2>
+<p>Please download full source files from <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">GitHub</a>.</p>
+<ul>
+<li>First of all, please ensure that you have followed the guide from the Flutter dev page to setup Visual Studio Code Flutter plugin and create. You can make Android Virtual Device using the avd manager in Android Studio.</li>
+</ul>
+<p><img src="images/avdmanager.png" alt="avdmanager"></p>
+<ul>
+<li>
+<p>Open folder <strong>rdp_mobile_news_flutter</strong> on visual studio codes. Start a new Terminal and go to folder <strong>rdp_mobile_news_flutter</strong> and type the following command to get dependencies required for this project.</p>
+<pre class="hljs"><code><div>flutter pub get
+</div></code></pre>
+</li>
+<li>
+<p>Launch Android emulator from Visual Studio code. It will show the emulator list at the bottom right menu.</p>
+</li>
+</ul>
+<p><img src="images/launch_android_emulator_1.png" alt="bottom_right"></p>
+<p>It will show the list.</p>
+<p><img src="images/launch_android_emulator_2.png" alt="emulator_list"></p>
+<p>Then it will show emulator like the following screenshot.</p>
+<p><img src="images/android_emlator.png" alt="android_emulator"></p>
+<ul>
+<li>Open main.dart and click Run =&gt;Run Without Debugging or Run Debugging to debug the flutter mobile app. It will install .apk and run on the emulator and shows a Login page on the emulator.</li>
+</ul>
+<p><img src="images/rundebug.png" alt="runthe app"></p>
+<p>You can type your RDP login with the client id on the Login screen to test the application. And then, you should see the output like the following screen records.</p>
+<p><img src="images/mobileapp_screenrecord.gif" alt="rundemo"></p>
+<h3 id="generate-apk-file-for-android-device">Generate .apk file for Android Device</h3>
+<p>There is an option for the user to generate a .apk file and copy it to install on a real Android device. You can start a new Terminal and go to folder rdp_mobile_news_flutter. Then you can type the following command to generate .apk file. You can find additional command from <a href="https://flutter.dev/docs/deployment/android">Flutter developer website</a>.</p>
+<pre class="hljs"><code><div>flutter build apk
+</div></code></pre>
+<p>It will generate debug and release version of apk file under folder 'rdp_mobile_news_flutter\build\app\outputs\flutter-apk'. And you can copy and install .apk to your device.</p>
+<h2 id="summary">Summary</h2>
+<p>In part2 of this article, we create a Mobile app to demonstrate a real and straightforward use-case. It explains how to use the Flutter UI toolkit to create a Mobile Application that shows a news headline and news story content. We utilize RDPManager class from Part1 of this article to retrieve data from RDP News services. The application calls function getAuthenticationInfo to get Access Token on the Login page. And then, use getNewsHeadlines to search a headline and shows a list on the News Headlines page. Users can click a specific headline to retrieve a News Story. The application will pass the story id to the getNewsStory function to retrieve a story content before creating a News Story page.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://developers.refinitiv.com/refinitiv-data-platform">Refinitiv Data Platform (RDP)</a>.</li>
+<li><a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis">Refinitiv Data Platform REST API</a>.</li>
+<li><a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis/docs?content=72067&amp;type=documentation_item">RDP API GENERAL GUIDELINES</a>.</li>
+<li><a href="https://dart.dev/tutorials">Dart Tutorial</a>.</li>
+<li><a href="https://flutter.dev/docs">Flutter Document</a>.</li>
+<li><a href="https://apidocs.refinitiv.com/Apps/ApiDocs">APIDocs</a></li>
+<li><a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">Example.RDPAPI.Flutter.RDP_News_Headliens_Flutter</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Build News Headlines Mobile app using Flutter and RDP (Part1)
 
-## Create RDP Manager class using Dart
+# Create RDP Manager class using Dart
 
 This article demonstrates use-cases and workflows for building a mobile application to shows a News headline and story content from [Refinitiv Data Platform(RDP)](https://developers.refinitiv.com/refinitiv-data-platform). We will create a mobile demo application using the Flutter UI toolkit with a dart programming. We will use a [dart programming](https://dart.dev/) to create a class or library to support the functionality of the [RDP REST API](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis). The main functionalities that we need to support is a function to get Access Token from the RDP server and a function to search a news headline and retrieve news story content from News services.
 

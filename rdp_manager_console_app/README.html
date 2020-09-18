@@ -1,0 +1,944 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\U8009179\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.13\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="build-news-headlines-mobile-app-using-flutter-and-rdp-part1">Build News Headlines Mobile app using Flutter and RDP (Part1)</h1>
+
+<h2 class="mume-header" id="create-rdp-manager-class-using-dart">Create RDP Manager class using Dart</h2>
+
+<p>This article demonstrates use-cases and workflows for building a mobile application to shows a News headline and story content from <a href="https://developers.refinitiv.com/refinitiv-data-platform">Refinitiv Data Platform(RDP)</a>. We will create a mobile demo application using the Flutter UI toolkit with a dart programming. We will use a <a href="https://dart.dev/">dart programming</a> to create a class or library to support the functionality of the <a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis">RDP REST API</a>. The main functionalities that we need to support is a function to get Access Token from the RDP server and a function to search a news headline and retrieve news story content from News services.</p>
+<p>To create a mobile UI, we will use <a href="https://flutter.dev/">Flutter UI toolkit</a> to build the app. Flutter can be natively compiled applications for mobile, web, and desktop from a single codebase. It is a free and open-source Google mobile UI framework that provides a fast and expressive way for developers to build native apps on both IOS and Android. You can also test the app on the Android emulator and ios emulator (macOS).</p>
+<p>There are two parts for this article and this one is the first part to demonstrate how to use dart programming to create a class for retrieving News headlines data from RDP News services. The outcome from this article is a Dart library with a sample console app to test the functionality. The class will be used in the Mobile UI which is <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/tree/master/rdp_mobile_news_flutter">Part 2</a> of this article.</p>
+<p>Below is a screenshot of the Flutter mobile app page break down by the use-case. We need to create a dart library to support these functions.</p>
+<p><img src="images/coverpage_white_blue.png" alt="cover"></p>
+<h2 class="mume-header" id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li>
+<p>Understand a basic concept of RDP and RDP REST API. We recommend you to read <a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis/docs?content=72067&amp;type=documentation_item">RDP API GENERAL GUIDELINES</a> at the first steps. You can also test your RDP account with <a href="https://apidocs.refinitiv.com/Apps/ApiDocs">API Playground</a> to understand the HTTP request and response messages the application has to send and receive.</p>
+</li>
+<li>
+<p>Install Flutter and Dart. To build and run the sample application, you can follow instructions from <a href="https://flutter.dev/docs/get-started/install">Flutter dev</a> page to setup Flutter on Windows or macOS. You also need to install <a href="https://developer.android.com/studio">Android Studio</a> as we need to use an Android emulator to test the Flutter app. Please understand the primary usage of the Dart programming language and Flutter. There are many useful articles internet, and you can also learn primary uses of Dart and Flutter from the Flutter developer site.</p>
+</li>
+<li>
+<p><a href="https://code.visualstudio.com/">Visual Studio Code(VS Code)</a>. You can follow the setting from the Flutter Dev Getting start page to add the Flutter plugin to the visual studio code. Then you can use it to create a new project, write the codes, debug and then build and run the app on the emulator.</p>
+</li>
+<li>
+<p>A valid RDP account with permission to retrieve news headlines and stories from RDP News services.</p>
+</li>
+</ul>
+<h2 class="mume-header" id="create-rdp-manager">Create RDP Manager</h2>
+
+<p>In order to use RDP REST API, developer can use any programming language which support HTTP client library to send a HTTP request accroding to REST API specification to get the data from particular services. In this case we will build a mobile application using Google Flutter UI toolkit, therefore, we can use http client library provided in dart development kit to call a REST API.</p>
+<p>We will  create a class or library to provide interfaces to support funtionality of the REST API. It will use dart http library to handle the HTTP requests and responses from the RDP server. The library will support the following functionally on the RDP Services.</p>
+<ol>
+<li>
+<p>Get OAuth2 access token.<br>
+This function will manage to get OAuth2 access token from RDP server. We need to pass username,password and client id in the Http request message to get the access token. Or we can use refresh token to get the new access token from the server after the token is expired. The application has to pass the access token to HTTP request header when calling the REST API to access the resource on the server.</p>
+</li>
+<li>
+<p>Search a news headlines. It will return a list of news headlines including its metadata from the News headline service.</p>
+</li>
+<li>
+<p>Retrieve a news story including metadata from a News story service. User must pass story id associated with the news headline to the function.</p>
+</li>
+</ol>
+<h2 class="mume-header" id="implementations">Implementations</h2>
+
+<p>Please note that the we ports the application logics to handle the HTTP request and response message from <a href="https://github.com/Refinitiv/websocket-api/tree/master/Applications/Examples/EDP/CSharp">C# websocket-api example</a> provided on <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">Github</a>.</p>
+<p>Let start creating new dart console app using Visual Studio Code. You can press Ctrl+Shift+p (on windows) and then type &apos;Dart&apos; and select <strong>Dart:New Project</strong> as below screen shot.</p>
+<p><img src="images/create_new_dart_app.png" alt="create_new_dart_app"></p>
+<p>Then select Console Application.</p>
+<p><img src="images/create_dart_console_app.png" alt="create_new_dart_app"></p>
+<p>It will ask you to provide a project name and select location to generate the project files. Visual Studio Code will create new console app with a sample codes for you. Then you can modify or delete default files and replace it with our codes.</p>
+<p>You can download the whole projects and source files from <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">Github</a>. It&apos;s the project under folder rdp_manager_console_app. You can find RDP Manager class under folder &apos;lib/rdp&apos;.</p>
+<p>In this article, we will omit some codes and show you only a snippet of codes required for implement the function.</p>
+<h3 class="mume-header" id="building-rdp-manager-class">Building RDP Manager class</h3>
+
+<p>This class is a main class to manage data and provide interface to retrieve contents from RDP. You can find full source codes from file <strong>&lt;project folder&gt;/lib/rdp/rdp_manager.dart</strong>. You can find the main interfaces for the class from the following snippet codes.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">class</span> <span class="token class-name">RdpManager</span> <span class="token punctuation">{</span>
+  String clientId<span class="token punctuation">;</span>
+  String refreshToken<span class="token punctuation">;</span>
+  String scope<span class="token punctuation">;</span>
+  String userName<span class="token punctuation">;</span>
+  String userPassword<span class="token punctuation">;</span>
+  rdpMsgData<span class="token punctuation">.</span>AccessToken accessTokenInfo<span class="token punctuation">;</span>
+  <span class="token comment">//Get OAuth2 acccess token from the server</span>
+  Future<span class="token operator">&lt;</span>rdpMsgData<span class="token punctuation">.</span>TokenResponse<span class="token operator">&gt;</span> <span class="token function">getAuthenticationInfo</span><span class="token punctuation">(</span>bool useRefreshToken<span class="token punctuation">,</span><span class="token punctuation">{</span>String userName<span class="token punctuation">,</span>String userPassword<span class="token punctuation">,</span>String clientId<span class="token punctuation">,</span>String refreshToken<span class="token punctuation">,</span>String scope <span class="token operator">=</span> <span class="token string">&apos;trapi&apos;</span><span class="token punctuation">,</span>String url<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// Implementations</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">//Get News headlines from the server</span>
+  Future<span class="token operator">&lt;</span>rdpMsgData<span class="token punctuation">.</span>NewsHeadlineResp<span class="token operator">&gt;</span> <span class="token function">getNewsHeadlines</span><span class="token punctuation">(</span>
+      rdpMsgData<span class="token punctuation">.</span>AccessToken accessToken<span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>String query<span class="token punctuation">,</span>
+      String cursor<span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// Implmentations</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">//Get News Story from the server</span>
+  Future<span class="token operator">&lt;</span>rdpMsgData<span class="token punctuation">.</span>NewsStoryResp<span class="token operator">&gt;</span> <span class="token function">getNewsStory</span><span class="token punctuation">(</span>
+      rdpMsgData<span class="token punctuation">.</span>AccessToken accessToken<span class="token punctuation">,</span> String storyId<span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// Implementations</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</pre><h3 class="mume-header" id="add-function-to-get-oauth2-access-token">Add function to get OAuth2 access token</h3>
+
+<p><strong>getAuthenticationInfo</strong>  is a function to get a username, password and client id from user input and then send Login request to the token endpoint to get the OAuth2 access token. This is the first method that application has to call when using RDP services. This is because when you try to access resource on another services, you need to pass a valid access token in Authorization header of the HTTP reqeust message. Please find more details about the <a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis/learning?content=38562&amp;type=learning_material_item">Authorization</a> from <a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis/learning?content=38560&amp;type=learning_material_item">Tutorial Page</a>.</p>
+<p>The root endpoint for REST API calls is:</p>
+<pre data-role="codeBlock" data-info="url" class="language-url"><code>https://api.refinitiv.com
+</code></pre><p>Endpoint for Token Service:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token operator">/</span>auth<span class="token operator">/</span>oauth2<span class="token operator">/</span><span class="token operator">&lt;</span>VERSION<span class="token operator">&gt;</span><span class="token operator">/</span>token
+</pre><p>We will defined list of endpoint in <strong>&apos;&lt;project&gt;/lib/rdp/rdp_endpoints.dart</strong></p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">class</span> <span class="token class-name">RdpEndpoints</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> String rdp_hostname <span class="token operator">=</span> <span class="token string">&quot;api.refinitiv.com&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> String authTokenUrl <span class="token operator">=</span> <span class="token string">&apos;/auth/oauth2/v1/token&apos;</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> String streamServiceDiscUrl <span class="token operator">=</span> <span class="token string">&apos;/streaming/pricing/v1/&apos;</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> String newsHeadlinesUrl <span class="token operator">=</span> <span class="token string">&apos;/data/news/v1/headlines&apos;</span><span class="token punctuation">;</span>
+  <span class="token keyword">static</span> <span class="token keyword">const</span> String newsStoriesUrl <span class="token operator">=</span> <span class="token string">&apos;/data/news/v1/stories&apos;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Below is a snippet of codes for the implementation of the getAuthenticationInfo interface. It will return data as TokenResponse class which implemented in <strong>&apos;&lt;project&gt;/lib/rdp/rdp_message_data.dart</strong>. The method use http client interface from dart package so the app has to import http library.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">import</span> <span class="token string">&apos;package:http/http.dart&apos;</span> <span class="token operator">as</span> http<span class="token punctuation">;</span>
+</pre><p>Create http headers;</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">    <span class="token keyword">var</span> headerList <span class="token operator">=</span> <span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// Set Http Request Headers</span>
+    headerList<span class="token punctuation">[</span><span class="token string">&apos;Content-Type&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;application/x-www-form-urlencoded&apos;</span><span class="token punctuation">;</span>
+    headerList<span class="token punctuation">[</span><span class="token string">&apos;Accept&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;application/json&apos;</span><span class="token punctuation">;</span>
+    headerList<span class="token punctuation">[</span><span class="token string">&apos;AllowAutoRedirect&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;false&apos;</span><span class="token punctuation">;</span>
+</pre><p>Create JSON request body and pass the username,password and client id to the message. Or just pass refresh_token in case that the access token about to expired.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">    <span class="token comment">// Construct JSON body for the Authentication request.</span>
+    <span class="token keyword">var</span> body <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    body<span class="token punctuation">[</span><span class="token string">&apos;username&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userName<span class="token punctuation">;</span>
+    body<span class="token punctuation">[</span><span class="token string">&apos;client_id&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>clientId<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>useRefreshToken<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      body<span class="token punctuation">[</span><span class="token string">&apos;grant_type&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;refresh_token&apos;</span><span class="token punctuation">;</span>
+      body<span class="token punctuation">[</span><span class="token string">&apos;refresh_token&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refreshToken<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      body<span class="token punctuation">[</span><span class="token string">&apos;takeExclusiveSignOnControl&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;true&apos;</span><span class="token punctuation">;</span>
+      body<span class="token punctuation">[</span><span class="token string">&apos;grant_type&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;password&apos;</span><span class="token punctuation">;</span>
+      body<span class="token punctuation">[</span><span class="token string">&apos;scope&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>scope<span class="token punctuation">;</span>
+      body<span class="token punctuation">[</span><span class="token string">&apos;password&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userPassword<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</pre><p>Then use http client class to send a post message to a Token endpoint to get the new access token.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">    <span class="token keyword">var</span> tokenResp <span class="token operator">=</span> rdpMsgData<span class="token punctuation">.</span><span class="token function">TokenResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> client <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> getTokenUri <span class="token operator">=</span>
+          Uri<span class="token punctuation">.</span><span class="token function">https</span><span class="token punctuation">(</span>RdpEndpoints<span class="token punctuation">.</span>rdp_hostname<span class="token punctuation">,</span> RdpEndpoints<span class="token punctuation">.</span>authTokenUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> httpResponse <span class="token operator">=</span>
+          <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span>getTokenUri<span class="token punctuation">,</span> headers<span class="token punctuation">:</span> headerList<span class="token punctuation">,</span> body<span class="token punctuation">:</span> body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">//Handle http response message</span>
+      <span class="token comment">//...</span>
+     <span class="token punctuation">}</span> on SocketException <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;SocketError Exception ${e.message}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      tokenResp<span class="token punctuation">.</span>errorType <span class="token operator">=</span> <span class="token string">&quot;SocketException&quot;</span><span class="token punctuation">;</span>
+      tokenResp<span class="token punctuation">.</span>errorDescription <span class="token operator">=</span> e<span class="token punctuation">.</span>message<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;Unhandled Exception $e&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      tokenResp<span class="token punctuation">.</span>errorType <span class="token operator">=</span> <span class="token string">&apos;Unhandled Exception&apos;</span><span class="token punctuation">;</span>
+      tokenResp<span class="token punctuation">.</span>errorDescription <span class="token operator">=</span> <span class="token string">&apos;Unhandled Exception $e&apos;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+      client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</pre><p>Process HTTP resonse message and get access token from the JSON message. Or process to get the errror details from the response or exception in case that the it fails. And then return TokenResp to the application.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>headers<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span><span class="token string">&apos;Transfer-Encoding&apos;</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+              httpResponse<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&apos;Transfer-Encoding&apos;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&apos;chunked&apos;</span><span class="token punctuation">)</span> <span class="token operator">||</span> httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">.</span>isNotEmpty<span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+        tokenResp<span class="token punctuation">.</span>statusCode <span class="token operator">=</span> httpResponse<span class="token punctuation">.</span>statusCode<span class="token punctuation">;</span>
+        tokenResp<span class="token punctuation">.</span>reasonPhase <span class="token operator">=</span> httpResponse<span class="token punctuation">.</span>reasonPhrase<span class="token punctuation">;</span>
+        tokenResp<span class="token punctuation">.</span>errorType <span class="token operator">=</span>
+            <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;error&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        tokenResp<span class="token punctuation">.</span>errorDescription <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+            <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;error_description&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>statusCode <span class="token operator">==</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span> httpResponse<span class="token punctuation">.</span>contentLength <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">var</span> accessTokenData <span class="token operator">=</span> rdpMsgData<span class="token punctuation">.</span>AccessToken<span class="token punctuation">.</span><span class="token function">fromJson</span><span class="token punctuation">(</span>
+              json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          tokenResp<span class="token punctuation">.</span>tokenData <span class="token operator">=</span> accessTokenData<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// Handle HttpResponse status code</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token number">301</span><span class="token punctuation">:</span>
+          <span class="token keyword">case</span> <span class="token number">302</span><span class="token punctuation">:</span>
+          <span class="token keyword">case</span> <span class="token number">307</span><span class="token punctuation">:</span>
+          <span class="token keyword">case</span> <span class="token number">308</span><span class="token punctuation">:</span>
+            <span class="token comment">// Perform URL redirect</span>
+            client<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;${httpResponse.statusCode} ${httpResponse.reasonPhrase}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            String newHost <span class="token operator">=</span> httpResponse<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&apos;Location&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>newHost <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> newHost<span class="token punctuation">.</span>isNotEmpty<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              tokenResp <span class="token operator">=</span>
+                  <span class="token keyword">await</span> <span class="token function">getAuthenticationInfo</span><span class="token punctuation">(</span>useRefreshToken<span class="token punctuation">,</span> url<span class="token punctuation">:</span> newHost<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    accessTokenInfo <span class="token operator">=</span> tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> tokenResp<span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="create-function-to-get-news-headlines">Create function to get News headlines</h3>
+
+<p>Basically a get headlines operation is an endpoint under News Services group(/data/news/v1/) according to the <a href="https://apidocs.refinitiv.com/">API Docs page</a>.</p>
+<h4 class="mume-header" id="__get-headlines-endpoint__"><strong>Get Headlines endpoint</strong></h4>
+
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token operator">/</span>data<span class="token operator">/</span>news<span class="token operator">/</span>Version<span class="token operator">/</span>headlines
+</pre><h4 class="mume-header" id="__query-parameters__"><strong>Query Parameters</strong></h4>
+
+<p>The user has an option to pass additional query parameters to get specific content to relate to the keyword in the query. The following parameters are request options.</p>
+<ul>
+<li>
+<p><strong>query</strong></p>
+<p>The user search query. It supports Analyze operation. Analyze operation computes a tree expression from a user query string. It would break down a user query string into News related entities, then aggregate them into a boolean filtering tree. You can find more details of Analyze operation from the API Docs page.</p>
+</li>
+<li>
+<p><strong>limit</strong><br>
+Limit of headline (default 10, range value: [0, 100])</p>
+</li>
+<li>
+<p><strong>cursor</strong><br>
+The cursor is a pagination cursor that can be used to retrieve information by pages. Two cursors are <strong>prev</strong> and <strong>next</strong> depending on the direction in which you want to paginate. Most of our paginated endpoints support a cursors based syntax. Initial search results always return pagination information with all search contexts and can be used in the next page search.</p>
+<p>Here is an example of cursors present in the response of headlines:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;meta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;next&quot;</span><span class="token operator">:</span> <span class="token string">&quot;H4sIAAAAAAAAABWMsQ7CIBiE3+VWMQEikNZdt7qYGN0I/QcShAZKrWn67uJ2d9/dbXjb1aUaZ/SCYfJLampDpE/xI3oIpc2Ja2OkVipehodyz/h9HSQXHe+4PPNjC8Hgy0Br22LOlbAzlJT/tj3d0y2MrZIp0GKjo2tOdWrMhoD9B/aNdOODAAAA&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;prev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;H4sIAAAAAAAAABWMwQrCMBiD3yVXJ7TFtmze9TYvguitdL9QqO1o3ZyMvbu/tyRfkhUvt/g8pTc62WAMc2a1ItGnhgEdpDb2IIy1ymidTv1N+3v6PnZKyFa0Qh3FnkM0CLWnhbd4ulgJW4Oay9/z1TVf4sCdQpFmlzydS55GZi5GbD9x8rfohAAAAA==&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Then to get the next page for the same context use cursor value from initial search:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token operator">/</span>headlines<span class="token operator">?</span>cursor<span class="token operator">=</span>H4sIAAAAAAAAABWMsQ7CIBiE3<span class="token operator">%</span><span class="token number">2</span>BVWMQEikNZdt7qYGN0I<span class="token operator">%</span><span class="token number">2</span>FQcShAZKrWn67uJ2d9<span class="token operator">%</span><span class="token number">2</span>FdbXjb1aUaZ<span class="token operator">%</span><span class="token number">2</span>FSCYfJLampD
+</pre></li>
+<li>
+<p><strong>Sort Order</strong></p>
+<p>Support three values:</p>
+<ul>
+<li><strong>New to Old</strong> (default)</li>
+<li><strong>Old to New</strong></li>
+<li><strong>Most Read</strong></li>
+</ul>
+<p>If the MostRead sort order was selected, you could specify the date range for most read headlines using mostReadDateFrom and mostReadDateTo parameters.</p>
+<p>For example:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token operator">/</span>headlines<span class="token operator">?</span>query<span class="token operator">=</span>TOPNEWS<span class="token operator">&amp;</span>sort<span class="token operator">=</span>mostRead<span class="token operator">&amp;</span>mostReadDateFrom<span class="token operator">=</span><span class="token number">2011</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">&amp;</span>mostReadDateTo<span class="token operator">=</span><span class="token number">2018</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">-</span><span class="token number">10</span>
+</pre><p>If mostReadDateFrom or/and mostReadDateTo specified, but the sort order is not equal to mostRead, values will be ignored.</p>
+</li>
+<li>
+<p><strong>Relevancy</strong></p>
+<p>Three values are supported:</p>
+<ul>
+<li>Filter on High relevance should return results for just HIGH</li>
+<li>Filter on &quot;Medium&quot; relevance should result for Medium+HIGH</li>
+<li>Filter on &quot;All&quot; relevance should result for Low+Medium+HIGH</li>
+</ul>
+<p>For example,</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">headlines<span class="token operator">?</span>query<span class="token operator">=</span>A<span class="token operator">&amp;</span>relevance<span class="token operator">=</span>Medium
+</pre></li>
+</ul>
+<h4 class="mume-header" id="response-data">Response Data</h4>
+
+<p>The response data is a JSON message contains fields that represent information such as a story id with headlines, text, and metadata; you can find a list of available fields and its usage from <a href="https://apidocs.refinitiv.com/Apps/ApiDocs">APIDocs</a>.</p>
+<p>In this example app, we will parse only fields we are interested such as a list of story id and its headlines, and keep it in our data structure so the application can get the list and shows it in the  UI.</p>
+<p>Below is a class NewsHeadlineResp, which used to hold the News headlines response; we use it to cache the data from the Http response message.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">class</span> <span class="token class-name">NewsHeadlineResp</span> <span class="token keyword">implements</span> <span class="token class-name">ResponseMsg</span> <span class="token punctuation">{</span>
+  List<span class="token operator">&lt;</span>NewsHeadlinesData<span class="token operator">&gt;</span> headlinesDatas<span class="token punctuation">;</span>
+  NewsHeadlineMeta metaInfo<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  int statusCode<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  String reasonPhase<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  String errorType<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  String errorDescription<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>The following codes are implementations of the <strong>getNewsHeadlines</strong> method.<br>
+It starts with creating HTTP headers.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">var</span> headerList <span class="token operator">=</span> <span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    headerList<span class="token punctuation">[</span><span class="token string">&apos;Accept&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;application/json&apos;</span><span class="token punctuation">;</span>
+    headerList<span class="token punctuation">[</span><span class="token string">&apos;AllowAutoRedirect&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;false&apos;</span><span class="token punctuation">;</span>
+    headerList<span class="token punctuation">[</span><span class="token string">&apos;Authorization&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span>
+        <span class="token string">&apos;${accessToken.tokenType} ${accessToken.accessToken}&apos;</span><span class="token punctuation">;</span>
+</pre><p>Build a query parameters. There are two type of the options supported by the app for now, that are query and cursor to get next page for the same data context;</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"> <span class="token keyword">var</span> queryParameters <span class="token operator">=</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> String<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>query <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+        queryParameters<span class="token punctuation">[</span><span class="token string">&apos;query&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> query<span class="token punctuation">;</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>cursor <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> queryParameters<span class="token punctuation">[</span><span class="token string">&apos;cursor&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> cursor<span class="token punctuation">;</span>
+<span class="token keyword">var</span> serverUri <span class="token operator">=</span> Uri<span class="token punctuation">.</span><span class="token function">https</span><span class="token punctuation">(</span>RdpEndpoints<span class="token punctuation">.</span>rdp_hostname<span class="token punctuation">,</span>
+    RdpEndpoints<span class="token punctuation">.</span>newsHeadlinesUrl<span class="token punctuation">,</span> queryParameters<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>And then use http get to retrieve data using headlines endpoints and query parameters.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">   rdpMsgData<span class="token punctuation">.</span>NewsHeadlineResp headlinesResp <span class="token operator">=</span> rdpMsgData<span class="token punctuation">.</span><span class="token function">NewsHeadlineResp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">var</span> client <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">var</span> httpResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>serverUri<span class="token punctuation">,</span> headers<span class="token punctuation">:</span> headerList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      headlinesResp<span class="token punctuation">.</span>statusCode <span class="token operator">=</span> httpResponse<span class="token punctuation">.</span>statusCode<span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>statusCode <span class="token operator">!=</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        headlinesResp<span class="token punctuation">.</span>reasonPhase <span class="token operator">=</span> httpResponse<span class="token punctuation">.</span>reasonPhrase<span class="token punctuation">;</span>
+        headlinesResp<span class="token punctuation">.</span>errorType <span class="token operator">=</span>
+            <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;error&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        headlinesResp<span class="token punctuation">.</span>errorDescription <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+            <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;error_description&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+</pre><p>If success we start parsing JSON message from the HTTP response. Below is a sample of the JSON message for the headlines response. Omit some parts to show a short message.</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;storyId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;urn:newsml:reuters.com:20200911:nDJR9QcThk:1&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;newsItem&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;_version&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;contentMeta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;audience&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;_qcode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NP:MFDJ&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;creator&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;_qcode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NS:DJN&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;_role&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sRole:source&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;infoSource&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;_qcode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NS:DJN&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;_role&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sRole:source&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;_qcode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NS:DJN&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;_role&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sRole:origProv&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;language&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;_tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;it&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;subject&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;_qcode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;M:1QD&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;urgency&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;itemMeta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;firstCreated&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-11T09:19:17.053Z&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;versionCreated&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-09-11T09:19:17.053Z&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TOP STORIES MONDO: Microsoft denuncia attacchi hacker contro elezioni Usa&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;storyId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;urn:newsml:reuters.com:20200911:nDjcBkpdM:1&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;newsItem&quot;</span><span class="token operator">:</span>
+      <span class="token punctuation">{</span>
+          <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TOP STORIES MONDO: Microsoft denuncia attacchi hacker contro elezioni Usa&quot;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;meta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pageLimit&quot;</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;next&quot;</span><span class="token operator">:</span> <span class="token string">&quot;H4sIAAAAAAAAABWNywrCMBAA/2WvVkjEgo2nguDJCrWexENotxpYk5KkL0r/3e1x9jGzQGsooge1QJw7BAWtR4w4RUhg0NRvo+cjZ2pJfwKoF3xRN2QswntN4Ken2vU2gpIigc4MLm4yi2MwDf/KNMtOMhVHcRCpLcq8Hme04+7ALDIpz2J/yatbVXLBhGILK4ieuywPzm/IssrdqeETj4SDtjVeves73mkiWP/ASLWpxwAAAA==&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;prev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;H4sIAAAAAAAAABWOQQuCQBCF/8tcM1gLqbVTIAQejMpO0WHRMZemXdldzRD/e+PlwZs3882boNEU0EE6Qfh1CCk0DjHgGCCCQVG/jO63I7uG1MtD+oAWVU3aIDznCD5qrGxvAqSxiKDTgw0LzODX65pv40TKPUuyE8nWZPlVXqqyfa82YiOEjOODWGd5wXjti+UrF1DkERjtrVs8o0p7ppp3HBIOylR4crbvOFNEMP8BPZN3Z8UAAAA=&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>The following codes is a sample codes the application used to parse the data from JSON message. It starts from parsing an array of story is under <strong>data</strong> node.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">          <span class="token comment">// Get a list contains story id.</span>
+          <span class="token keyword">var</span> headlinesList <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+              <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;data&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> List<span class="token operator">&lt;</span><span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>headerList <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            List<span class="token operator">&lt;</span>rdpMsgData<span class="token punctuation">.</span>NewsHeadlinesData<span class="token operator">&gt;</span> newsHeadlinesDataList <span class="token operator">=</span>
+                List<span class="token operator">&lt;</span>rdpMsgData<span class="token punctuation">.</span>NewsHeadlinesData<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// Parsing Meta tag to get next and prev cursor</span>
+            <span class="token keyword">var</span> metaInfo <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+                <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;meta&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>metaInfo <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              rdpMsgData<span class="token punctuation">.</span>NewsHeadlineMeta metaData <span class="token operator">=</span>
+                  rdpMsgData<span class="token punctuation">.</span>NewsHeadlineMeta<span class="token punctuation">.</span><span class="token function">fromJson</span><span class="token punctuation">(</span>metaInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              headlinesResp<span class="token punctuation">.</span>metaInfo <span class="token operator">=</span> metaData<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token comment">// Iterate through each node in array to get story id, firstcreated, version created and headline title.</span>
+            headlinesList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">var</span> headlinesJsonData <span class="token operator">=</span> element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+              <span class="token keyword">var</span> newsHeadlines <span class="token operator">=</span> rdpMsgData<span class="token punctuation">.</span><span class="token function">NewsHeadlinesData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              headlinesJsonData<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">switch</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token keyword">case</span> <span class="token string">&apos;storyId&apos;</span><span class="token punctuation">:</span>
+                    newsHeadlines<span class="token punctuation">.</span>storyId <span class="token operator">=</span>
+                        headlinesJsonData<span class="token punctuation">[</span><span class="token string">&apos;storyId&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> String<span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                  <span class="token keyword">case</span> <span class="token string">&apos;newsItem&apos;</span><span class="token punctuation">:</span>
+                    <span class="token punctuation">{</span>
+                      <span class="token punctuation">(</span>value <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key2<span class="token punctuation">,</span> value2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>key2 <span class="token operator">==</span> <span class="token string">&apos;itemMeta&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                          <span class="token punctuation">(</span>value2 <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+                              <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key3<span class="token punctuation">,</span> value3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token keyword">switch</span> <span class="token punctuation">(</span>key3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                              <span class="token keyword">case</span> <span class="token string">&apos;firstCreated&apos;</span><span class="token punctuation">:</span>
+                                newsHeadlines<span class="token punctuation">.</span>firstCreated <span class="token operator">=</span> <span class="token punctuation">(</span>value3
+                                    <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> String<span class="token punctuation">;</span>
+                                <span class="token keyword">break</span><span class="token punctuation">;</span>
+                              <span class="token keyword">case</span> <span class="token string">&apos;versionCreated&apos;</span><span class="token punctuation">:</span>
+                                newsHeadlines<span class="token punctuation">.</span>firstCreated <span class="token operator">=</span> <span class="token punctuation">(</span>value3
+                                    <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> String<span class="token punctuation">;</span>
+                                <span class="token keyword">break</span><span class="token punctuation">;</span>
+                              <span class="token keyword">case</span> <span class="token string">&apos;title&apos;</span><span class="token punctuation">:</span>
+                                String contentText <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+                                <span class="token punctuation">(</span>value3 <span class="token operator">as</span> List<span class="token operator">&lt;</span><span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                  item<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>key4<span class="token punctuation">,</span> value4<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                    <span class="token keyword">if</span> <span class="token punctuation">(</span>key4 <span class="token operator">==</span> <span class="token string">&apos;\$&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                      <span class="token keyword">var</span> content <span class="token operator">=</span> value4<span class="token punctuation">;</span>
+                                      contentText <span class="token operator">+=</span>
+                                          <span class="token punctuation">(</span>content <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">:</span> content<span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span>
+                                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                newsHeadlines<span class="token punctuation">.</span>titleText <span class="token operator">=</span> contentText<span class="token punctuation">;</span>
+                                <span class="token keyword">break</span><span class="token punctuation">;</span>
+                            <span class="token punctuation">}</span>
+                          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                          <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              newsHeadlinesDataList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>newsHeadlines<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            headlinesResp<span class="token punctuation">.</span>headlinesDatas <span class="token operator">=</span> newsHeadlinesDataList<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+</pre><h3 class="mume-header" id="create-function-to-get-news-story">Create function to get News Story</h3>
+
+<h4 class="mume-header" id="get-story-endpoint">Get Story endpoint</h4>
+
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token operator">/</span>stories<span class="token operator">/</span><span class="token punctuation">{</span>story id<span class="token punctuation">}</span>
+</pre><p>Example</p>
+<pre data-role="codeBlock" data-info="url" class="language-url"><code>https://api.refinitiv.com/data/news/v1/stories/urn%3Anewsml%3Areuters.com%3A20190531%3AnL3N25U0E5
+</code></pre><h4 class="mume-header" id="get-story-content">Get Story Content</h4>
+
+<p>The story can be retrieved using JSON or HTML format. And to select a story format, two options are available:</p>
+<p>Set accept header:</p>
+<ul>
+<li>text/html</li>
+<li>application/json</li>
+</ul>
+<p>extension</p>
+<ul>
+<li>json</li>
+<li>html</li>
+</ul>
+<p>The extension has a higher priority than the header. It means that if, for example, accept header equal to &quot;text/html&quot;, but story ID send as sampleStory.json result will be in JSON format. Using html is quite complicated than json format, which provided news story in plain text. You can find more details about the format of Html from the <a href="https://apidocs.refinitiv.com/Apps/ApiDocs">APIDocs</a> page.</p>
+<p>Note that our function will support only &apos;application/json&apos; format, so it accepts only one input, which is a story id.</p>
+<p>Same as the function to get news headlines, we create a class named NewsStoryResp to hold data from the response message. And below is a snippet code of the class.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">class</span> <span class="token class-name">NewsStoryResp</span> <span class="token keyword">implements</span> <span class="token class-name">ResponseMsg</span> <span class="token punctuation">{</span>
+  NewsStoryData newsContent<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  int statusCode<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  String reasonPhase<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  String errorType<span class="token punctuation">;</span>
+
+  <span class="token metadata symbol">@override</span>
+  String errorDescription<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>The <strong>getNewsStory</strong> function starts from creating the header using the same codes as news headlines, and we need to append the story id to the end of the endpoint like the following snippet of codes.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"><span class="token keyword">var</span> serverUri <span class="token operator">=</span> Uri<span class="token punctuation">.</span><span class="token function">https</span><span class="token punctuation">(</span>
+          RdpEndpoints<span class="token punctuation">.</span>rdp_hostname<span class="token punctuation">,</span> <span class="token string">&apos;${RdpEndpoints.newsStoriesUrl}/$storyId&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>Then applications need to use the HTTP GET method to retrieve a News Story content.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"> <span class="token keyword">var</span> httpResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>serverUri<span class="token punctuation">,</span> headers<span class="token punctuation">:</span> headerList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      storyResp<span class="token punctuation">.</span>statusCode <span class="token operator">=</span> httpResponse<span class="token punctuation">.</span>statusCode<span class="token punctuation">;</span>
+</pre><p>Last steps, we need to parse the JSON message to get content.</p>
+<p>The function will parse only a language tag, headline text, and a news story in plain text format.<br>
+The whole JSON Message contains a lot of metadata, so it quite long. We will omit unwanted nodes and focus only on the following JSON data.</p>
+<h4 class="mume-header" id="story-content">Story Content</h4>
+
+<p>Node inlineData and inlineXml is a different representation of the same data. inlineData is a text representation, inlineXml is a formatted HTML markup which is ready to be used on HTML pages. Anyway, our function will parse content from inlineData node only.</p>
+<pre data-role="codeBlock" data-info="json" class="language-json">    <span class="token property">&quot;contentSet&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;inlineData&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;_contenttype&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;inlineXml&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;_contenttype&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="language">Language</h4>
+
+<p>It represents a list of Language in the news content.</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"> <span class="token property">&quot;contentMeta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;language&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;_tag&quot;</span><span class="token operator">:</span> <span class="token string">&quot;en&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+ <span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="title">Title</h4>
+
+<p>Title is a short description of the news.</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token property">&quot;contentMeta&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;title&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;$&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Bridgestone Enjoys Successful Olympic Winter Games Debut, Turns Attention to Olympic Games Tokyo 2020; Worldwide Olympic Partner&amp;apos;s first global pro...&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>Below is a snippet of codes that the function used to parse data from the JSON message.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">          <span class="token keyword">var</span> newsStoryData <span class="token operator">=</span> rdp_message<span class="token punctuation">.</span><span class="token function">NewsStoryData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+          <span class="token keyword">var</span> newsItemData <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>httpResponse<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+              <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;newsItem&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>newsItemData <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Extract language</span>
+            <span class="token punctuation">(</span><span class="token punctuation">(</span>newsItemData<span class="token punctuation">[</span><span class="token string">&apos;contentMeta&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;language&apos;</span><span class="token punctuation">]</span>
+                    <span class="token operator">as</span> List<span class="token operator">&lt;</span><span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span><span class="token string">&apos;_tag&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                newsStoryData<span class="token punctuation">.</span>newsTitle <span class="token operator">=</span>
+                    <span class="token punctuation">(</span>element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// Extract News Title</span>
+            <span class="token punctuation">(</span><span class="token punctuation">(</span>newsItemData<span class="token punctuation">[</span><span class="token string">&apos;contentMeta&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;headline&apos;</span><span class="token punctuation">]</span>
+                    <span class="token operator">as</span> List<span class="token operator">&lt;</span><span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                newsStoryData<span class="token punctuation">.</span>newsTitle <span class="token operator">=</span>
+                    <span class="token punctuation">(</span>element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// Extract News Title</span>
+            <span class="token punctuation">(</span><span class="token punctuation">(</span>newsItemData<span class="token punctuation">[</span><span class="token string">&apos;contentSet&apos;</span><span class="token punctuation">]</span> <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;inlineData&apos;</span><span class="token punctuation">]</span>
+                    <span class="token operator">as</span> List<span class="token operator">&lt;</span><span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                newsStoryData<span class="token punctuation">.</span>newsContent <span class="token operator">=</span>
+                    <span class="token punctuation">(</span>element <span class="token operator">as</span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> <span class="token keyword">dynamic</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;\$&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            storyResp<span class="token punctuation">.</span>newsContent <span class="token operator">=</span> newsStoryData<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="test-the-functionality">Test the functionality</h2>
+
+<p>After creating the three functions, it&apos;s time to test and see if it works as we expected or not.</p>
+<p>There is the main function implemented in file <strong>bin/main.dart</strong>. It will start when you run dart command or debug on Visual Studio code.</p>
+<p>The application flow starts from the login to the RDP server and gets an access token. Then pass a query to getNewsHeadlines. The application will receive a list of headlines with story id. The last steps it will iterate through the list and call getNewStory to get a new content one by one and print to console.</p>
+<p>Below is a snippet of codes from the primary function. It starts from setting the RDP account and set a query text to search headlines.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">  rdp<span class="token punctuation">.</span>userName <span class="token operator">=</span> <span class="token string">&apos;&lt;RDP Username&gt;&apos;</span><span class="token punctuation">;</span>
+  rdp<span class="token punctuation">.</span>userPassword <span class="token operator">=</span> <span class="token string">&apos;&lt;RDP Password&gt;&apos;</span><span class="token punctuation">;</span>
+  rdp<span class="token punctuation">.</span>clientId <span class="token operator">=</span> <span class="token string">&apos;&lt;RDP Client ID&gt;&apos;</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> headlinesQuery <span class="token operator">=</span> <span class="token string">&apos;(Apple Iphone12) and searchIn:FullStory&apos;</span><span class="token punctuation">;</span>
+</pre><p>Then get OAuth2 Access Token and if it success, start a Timer to get a refresh token.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">  <span class="token comment">// Step1 :  Get Access Token</span>
+  <span class="token keyword">var</span> tokenResp <span class="token operator">=</span> <span class="token keyword">await</span> rdp<span class="token punctuation">.</span><span class="token function">getAuthenticationInfo</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>tokenResp <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>statusCode <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">PrintTokenInfo</span><span class="token punctuation">(</span>tokenResp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>runLoop<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timer<span class="token punctuation">.</span><span class="token function">periodic</span><span class="token punctuation">(</span>
+            <span class="token function">Duration</span><span class="token punctuation">(</span>seconds<span class="token punctuation">:</span> <span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">.</span>expiresIn <span class="token operator">*</span> <span class="token number">0.9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">(</span>time<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+          myTimer <span class="token operator">=</span> time<span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>statusCode <span class="token operator">==</span> <span class="token number">200</span> <span class="token operator">&amp;&amp;</span>
+              tokenResp<span class="token punctuation">.</span>tokenData <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span>
+              tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">.</span>refreshToken <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            tokenResp <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">GetNewToken</span><span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">.</span>refreshToken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+</pre><p>Next step, pass the Access Token to the getNewsHeadlines function and getNewsStory function to retrieve data from News service</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">    <span class="token comment">/// Run the loops to display news headline and fetch headlines</span>
+    <span class="token comment">/// from next page cursor until it reach page count limit.</span>
+
+    rdp_message<span class="token punctuation">.</span>NewsHeadlineResp newsHeadlines<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pageIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pageCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">do</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>newsHeadlines <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        newsHeadlines <span class="token operator">=</span> <span class="token keyword">await</span> rdp<span class="token punctuation">.</span><span class="token function">getNewsHeadlines</span><span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">,</span>
+            query<span class="token punctuation">:</span> headlinesQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        newsHeadlines <span class="token operator">=</span> <span class="token keyword">await</span> rdp<span class="token punctuation">.</span><span class="token function">getNewsHeadlines</span><span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">,</span>
+            cursor<span class="token punctuation">:</span> newsHeadlines<span class="token punctuation">.</span>metaInfo<span class="token punctuation">.</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>newsHeadlines<span class="token punctuation">.</span>statusCode <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>pageCount <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> pageCount <span class="token operator">=</span> newsHeadlines<span class="token punctuation">.</span>metaInfo<span class="token punctuation">.</span>count<span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;Headlines Page#${pageIndex + 1}/$pageCount&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        newsHeadlines<span class="token punctuation">.</span>headlinesDatas<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+          <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;${element.storyId} ${element.titleText}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">var</span> storyResp <span class="token operator">=</span>
+              <span class="token keyword">await</span> rdp<span class="token punctuation">.</span><span class="token function">getNewsStory</span><span class="token punctuation">(</span>tokenResp<span class="token punctuation">.</span>tokenData<span class="token punctuation">,</span> element<span class="token punctuation">.</span>storyId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>storyResp<span class="token punctuation">.</span>statusCode <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;StoryId:${element.storyId}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;Title:${storyResp?.newsContent?.newsTitle}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;=======================================&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>storyResp<span class="token punctuation">.</span>newsContent<span class="token punctuation">.</span>newsContent<span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string">&apos;\n&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;\r\n&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&apos;next ===&gt;${newsHeadlines.metaInfo.next}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span>
+            <span class="token string">&apos;Error =&gt; ${newsHeadlines.statusCode} ${newsHeadlines.errorDescription} Stop&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">++</span>pageIndex <span class="token operator">&lt;</span> newsHeadlines<span class="token punctuation">.</span>metaInfo<span class="token punctuation">.</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="running-the-app">Running the app</h3>
+
+<p>Please download full projects and source files from <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">Github</a>.</p>
+<p>There are two folder in the git repository. Go to folder <strong>rdp_manager_conosole_app\bin</strong> first.</p>
+<p>You might need to start Terminal and run <a href="https://dart.dev/tools/pub/cmd/pub-get">pubtool</a> by typing <strong>pub get</strong> or <strong>flutter pub get</strong> command to get dependencies required by the project.</p>
+<p>Then modify &apos;bin/main.dart&apos; and change following lines to your RDP account.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart">rdp<span class="token punctuation">.</span>userName <span class="token operator">=</span> <span class="token string">&apos;&lt;RDP Username&gt;&apos;</span><span class="token punctuation">;</span>
+rdp<span class="token punctuation">.</span>userPassword <span class="token operator">=</span> <span class="token string">&apos;&lt;RDP Password&gt;&apos;</span><span class="token punctuation">;</span>
+rdp<span class="token punctuation">.</span>clientId <span class="token operator">=</span> <span class="token string">&apos;&lt;RDP Client ID&gt;&apos;</span><span class="token punctuation">;</span>
+</pre><p>and then change the headlinesQuery to a query you want to search in the following line:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart"> <span class="token keyword">var</span> headlinesQuery <span class="token operator">=</span> <span class="token string">&apos;Put your query here&apos;</span><span class="token punctuation">;</span>
+</pre><p>Next step run dart application using the following command.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">dart bin\main.dart
+</pre><p>You will see Access Token print to console when the login is successful, and then the application will print the headline followed by story id and start retrieving a story.</p>
+<p>Sampel Output</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">StatusCode:200
+Token Type:Bearer
+AccessToken:eyJ0eXAiOiJhdCtqd3QiLCJhbGciXXXXXXNUnibfnHkkCYYE4mrVgWN5_sEG9Y1FRhZdKwE147f7Jqi3mz0gqg4dM8WBZAC3LNRaBcKUTxYyQeE7r_8vR3j2w
+RefreshToken:XXX8156-2XXXXXXXX7e5809522bb
+Expired in:300 second
+
+Headlines Page<span class="token comment">#1/10</span>
+
+urn:newsml:reuters.com:20200914:nRscdgmNDa:4 STM.PA: STMicroelectronics NV - Modeling <span class="token keyword">for</span> near term strength, but FX headwinds <span class="token keyword">in</span> 2021 <span class="token punctuation">(</span>9 pages<span class="token punctuation">)</span> - Credit Suisse
+urn:newsml:reuters.com:20200914:nRscdgmNya:2 AMS.S: ams AG - 2H drivers <span class="token keyword">in</span> play - iPhone builds at ams and Auto recovery at Osram <span class="token punctuation">(</span>9 pages<span class="token punctuation">)</span> - Credit Suisse
+urn:newsml:reuters.com:20200915:nRscdgmFJa:2 Electronics-&#x3A6;&#xEF;&#x2563;&#xB5;&#x20A7;&#xA3;&#xB5;&#xFB;&#x2591;&#x3C3;&#xF4;&#xFC;&#x3C3;&#xEC;&#x2502;&#x3C3;&#x2591;&#xE5;&#x3C3;&#xC5;&#xE6;&#x3C3;&#x2555;&#xE2;&#x2229;&#x255D;&#xEE;&#x3C3;&#xE0;&#x2502;&#xB5;&#x2502;&#xBF;&#xB5;&#x2562;&#xEA;&#x3A6;&#x2524;&#x2563;&#x3C4;&#xF6;&#x2561;&#x3C3;&#xA1;&#xC9;&#x3A3;&#x2551;&#xBA;&#x3A3;&#x2555;&#xDC;&#xB5;&#xA3;&#x2551;&#x398;&#xFC;&#xE7;-09/12/2020 <span class="token punctuation">(</span>10 pages<span class="token punctuation">)</span> - Chuancai Securities Co., Ltd
+urn:newsml:reuters.com:20200914:nRscdglqNa:2 AUERBACH GRAYSON: Asia Daily Morning Note 09-14-20:  <span class="token punctuation">(</span>AAC Technologies, Accton, Air China, China Resources Land, Berli Jucker, Cheng Loong Paper, China Eastern Airlines, China Southern Airlines, Chongqing Brewery, Oncosil Medical, CP All<span class="token punctuation">)</span> <span class="token punctuation">(</span>32 pages<span class="token punctuation">)</span> - Auerbach Grayson <span class="token operator">&amp;</span> Co., Inc.
+urn:newsml:reuters.com:20200914:nRscdglfda:1 KR:  IT Hardware Industry: Anticipation rising towards 2H20 earnings <span class="token keyword">for</span> smartphone and foundry players <span class="token punctuation">(</span>97 pages<span class="token punctuation">)</span> - DBS Bank
+urn:newsml:reuters.com:20200914:nRscdgkzna:1 &#x3C3;&#xEC;&#xC4;&#x3A3;&#x2555;&#x2551;&#x3C3;&#xC5;&#xE6;&#x3C3;&#x2555;&#xE2;&#x398;&#x2555;&#x2510;&#x3A6;&#xC6;&#xD6; 2.0 &#x2229;&#x255D;&#xEE; 8 &#xB5;&#xA3;&#xEA;&#x3C4;&#xEB;&#x2563;&#xB5;&#xFB;&#xBB;&#xB5;&#xEF;&#xEB;&#x3C3;&#xA2;&#x255C;&#x3C3;&#xE5;&#xE0;&#x398;&#xF6;&#xC7;&#x3C3;&#xF6;&#xAB; 1.18 &#x3A3;&#x2555;&#xE7;&#x3A6;&#x255B;&#xE5;-09/14/2020 <span class="token punctuation">(</span>17 pages<span class="token punctuation">)</span> - CITIC Securities
+urn:newsml:reuters.com:20200914:nRscdgkxXa:2 &#x3C0;&#xE2;&#xE5;&#x3C0;&#xE9;&#xBB;&#x3C0;&#xE2;&#xC4;&#x3C0;&#xE2;&#xA1;&#x3C0;&#xE9;&#x2555;&#x3C0;&#xE2;&#x255D;&#x3C0;&#xE9;&#x2557;&#x3C0;&#xE9;&#xBB;&#x3C0;&#xE9;&#x2510;&#x3C0;&#xE2;&#x255D;: CS Japan Tech Weekly&#x2229;&#x255D;&#xEA;Vol.20&#x2229;&#x255D;&#xEB;&#x2229;&#x255D;&#xDC;&#x3C3;&#xE0;&#xEA;&#x398;&#xC7;&#x2592;&#x3C0;&#xFC;&#xAB;&#xB5;&#xEE;&#xBB;&#x3C0;&#xE9;&#xE8;&#x3A6;&#x2510;&#xF6;&#x3C0;&#xE9;&#xE8;&#x3C0;&#xFC;&#xBF;&#x3A3;&#x2557;&#xE8;&#x398;&#xC7;&#x2592;&#x3C0;&#xFC;&#xAB;&#xB5;&#x2502;&#xBF;&#x3C4;&#xA2;&#xAB;&#x3C0;&#xE2;&#xA5;&#x3C0;&#xE9;&#xF1;&#x3C0;&#xE2;&#x2502;&#x3C0;&#xE2;&#xEA;&#x3C0;&#xE9;&#xC6;&#xB5;&#xF2;&#x2524;&#x3C4;&#xC9;&#xE5; <span class="token punctuation">(</span>21 pages<span class="token punctuation">)</span> - Credit Suisse
+urn:newsml:reuters.com:20200911:nRscdgcDJa:4 ITM Semiconductor <span class="token punctuation">(</span>084850 KS<span class="token punctuation">)</span>&#x393;&#xC7;&#xF6;Multiple New Business Opportunities <span class="token keyword">in</span> FY21 <span class="token punctuation">(</span>6 pages<span class="token punctuation">)</span> - Haitong International Research
+urn:newsml:reuters.com:20200911:nRscdgc3ca:1 KGI&#x3C3;&#xE7;&#x2592;&#x3C3;&#x192;&#x2551;&#x3C3;&#xC5;&#x2591;&#x3C4;&#xFC;&#xFA;&#xB5;&#xE8;&#xF2;&#x3A6;&#x2502;&#xE7;&#x398;&#xE1;&#xFF;&#x3A6;&#xEA;&#xAC;&#xB5;&#xF9;&#xD1;&#x3C3;&#xE1;&#x2592; -- 2020&#x3C3;&#x2563;&#x2524;09&#xB5;&#xA3;&#xEA;11&#xB5;&#xF9;&#xD1; <span class="token punctuation">(</span>27 pages<span class="token punctuation">)</span> - KGI Greater China
+urn:newsml:reuters.com:20200911:nRscdgc25a:1 KGI Taiwan Daily Navigator &#x393;&#xC7;&#xF4;September 11, 2020 <span class="token punctuation">(</span>33 pages<span class="token punctuation">)</span> - KGI Greater China
+
+StoryId:urn:newsml:reuters.com:20200910:nRscdg9yra:1
+Title:AUERBACH GRAYSON: Taiwanese Strategy - APPLE  CONCEPTS  HAVE  THE  ADVANTAGE  OF  THREE  LOWS<span class="token punctuation">;</span> IPHONE 12 WILL LURE BACK CAPITAL <span class="token punctuation">(</span>Taiwan<span class="token punctuation">)</span> <span class="token punctuation">(</span>7 pages<span class="token punctuation">)</span> - Auerbach Grayson <span class="token operator">&amp;</span> Co., Inc.
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+R E S E A R C H R E P O R T D I S T R I B U T E D B Y The attached research report and the excerpts from the research report below were written entirely by a broker partner of Auerbach Grayson, and not by Auerbach Grayson. Auerbach Grayson is distributing/providing this research report <span class="token keyword">for</span> your consideration. P R E P A R E D B Y RESEARCH Market Report Taiwan Taiwanese Strategy September 10, 2020 APPLE CONCEPTS HAVE THE ADVANTAGE OF THREE LOWS<span class="token punctuation">;</span> IPHONE 12 WILL LURE BACK CAPITAL <span class="token operator">&gt;</span> Taiwan&#x393;&#xC7;&#xD6;s Apple <span class="token punctuation">(</span>US<span class="token punctuation">)</span> concepts stocks <span class="token punctuation">(</span>excluding semiconductor<span class="token punctuation">)</span> have foreign capital holdings of only 43.6%, the lowest point since 2015 and down significantly from the peak of 54.8% <span class="token keyword">in</span> 2017, <span class="token function">which</span> could be attributed to interference from the Sino-US trade war/tech war, the emergence of the red supply chain, and the impact of COVID19 on consumption. Going forward, with these negatives priced <span class="token keyword">in</span> to some extent and iPhone 12 coming up, <span class="token function">which</span> should <span class="token function">help</span> 4Q20 overall iPhone shipment growth YoY turn positive, foreign capital might be lured back to replenish stocks. In addition, foreign capital has had a habit of underweighting before product launches and buying back the stocks <span class="token keyword">if</span> the product sales are better than expected, and <span class="token keyword">if</span> iPhone 12 indeed is well received by market, <span class="token keyword">then</span> there is a chance foreign capital will <span class="token keyword">return</span> to replenish stock holdings. <span class="token operator">&gt;</span> Taiwanese Apple concepts&apos;
+<span class="token punctuation">..</span>.
+traders@agco.com ops@agco.com Chief Executive Officer Managing Director, Head of Equities Managing Director, Global Trading Managing Director, Global Operations Asia Sales Asia Sales Asia Sales Asia / China Sales CEEMEA <span class="token operator">&amp;</span> LATAM Sales CEEMEA <span class="token operator">&amp;</span> LATAM Sales Global Emerging Markets Western Europe Sales Asia Trading Emerging Market Trading Emerging Market Trading Emerging Market Trading Western Europe Trading US <span class="token operator">&amp;</span> LATAM Trading Director, Global Capital Markets 1.212.453.3553 1.212.453.3545 1.212.557.4444 1.212.453.3518 david@agco.com adelafuente@agco.com gballantyne@agco.com fmuller@agco.com 1.212.453.3541 1.212.453.3515 1.212.453.3561 1.212.453.3539 1.212.453.3586 1.212.453.3571 44.773.941.0717 1.212.453.3538 hfukuchi@agco.com jhong@agco.com akukreja@agco.com jxiang@agco.com mdaoud@agco.com smandel@agco.com idevilder@ageurope.co.uk slueck@agco.com 1.212.557.4444 1.212.557.4444 1.212.557.4444 1.212.557.4444 1.212.557.4444 1.212.557.4444 mikelopiano@agco.com jkrase@agco.com ppeters@agco.com spollicino@agco.com kwood@agco.com ggimber@agco.com 1.212.453.3573 nbhatnagar@agco.com Trading Desk Hours <span class="token punctuation">(</span>New York Time<span class="token punctuation">)</span> &#x393;&#xC7;&#xF4; Sunday 4:00 pm to Friday 5:00 pm <span class="token punctuation">(</span>24 Hours<span class="token punctuation">)</span> *After trading hours, please call 1.212.557.4444 and you will automatically be connected to a trader. Research Research Coordinator Information Services Ismael Sadek Settlement Information Technology 1.212.453.3549 1.212.453.3512 1.212.557.4478 research@agco.com it@agco.com ops@agco.com YOUR LOCAL BROKER IN OVER 125 MARKETS Auerbach Grayson <span class="token operator">&amp;</span> Company, LLC WORLDWIDE 25 West 45th Street New York, NY 10036 Telephone 212 557 4444 Toll-Free 1 800 31world web www.agco.com  
+
+</pre><h2 class="mume-header" id="summary">Summary</h2>
+
+<p>In this article, we have described how to create a function to get Access Token from RDP and implement a function to retrieve news headlines and get its story content from a News Services using Dart programming. It also provide a sample codes to parse a data returns from the RDP News services. You can add your own method to get additional data from the JSON message.</p>
+<p>The library would be used to develop a mobile app in <a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp/tree/master/rdp_mobile_news_flutter">Part 2</a> of this article. In the second part, we will describe how to integrate the functions from the class with a Flutter UI toolkit to create a Mobile app. Users can deploy the app on android or ios and then use the app to log in to the RDP server and retrieve news headlines from user input. Let see the implementation in the second part.</p>
+<h2 class="mume-header" id="references">References</h2>
+
+<ul>
+<li><a href="https://developers.refinitiv.com/refinitiv-data-platform">Refinitiv Data Platform (RDP)</a>.</li>
+<li><a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis">Refinitiv Data Platform REST API</a>.</li>
+<li><a href="https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis/docs?content=72067&amp;type=documentation_item">RDP API GENERAL GUIDELINES</a>.</li>
+<li><a href="https://dart.dev/tutorials">Dart Tutorial</a>.</li>
+<li><a href="https://flutter.dev/docs">Flutter Document</a>.</li>
+<li><a href="https://apidocs.refinitiv.com/Apps/ApiDocs">APIDocs</a></li>
+<li><a href="https://github.com/Refinitiv-API-Samples/Example.RDPAPI.Flutter.RdpNewsHeadlinesMobileApp">Example.RDPAPI.Flutter.RDP_News_Headliens_Flutter</a></li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

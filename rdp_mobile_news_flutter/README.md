@@ -260,10 +260,10 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
   }
 ```
 
-To fetch news headlines, we create a separate method named _fetchNewsHedlines to retrieve the data and cache it in newsContentList, which is a List<rdpMsgData.NewContents>. So we can re-use it later in another use-case. We also create a method named ___fetchMoreHeadlines__ to use the pagination cursor described in the previous section. It just calls _fetchNewsHeadlines and set useCursor to true to use a cursor mode.
+To fetch news headlines, we create a separate method named _fetchNewsHeadlines to retrieve the data and cache it in newsContentList, which is a List<rdpMsgData.NewContents>. So we can re-use it later in another use-case. We also create a method named ___fetchMoreHeadlines__ to use the pagination cursor described in the previous section. It just calls _fetchNewsHeadlines and set useCursor to true to use a cursor mode.
 
 ```dart
-void _fetchNewsHedlines(String keyword, bool clearList,
+void _fetchNewsHeadlines(String keyword, bool clearList,
       [bool useCursor, String nextCursor]) async {
     this._keyword = keyword;
     if (clearList) newsContentList.clear();
@@ -323,7 +323,7 @@ void _fetchMoreHeadlines() {
         content: Text('Loading more news...'),
       ));
       print('Next =>${this.nextCursor}');
-      _fetchNewsHedlines(_keyword, false, true, this.nextCursor);
+      _fetchNewsHeadlines(_keyword, false, true, this.nextCursor);
       widget._scaffoldKey.currentState.hideCurrentSnackBar();
     }
   }
@@ -335,7 +335,7 @@ To fetch a news headlines to the default main page. The application will call _f
  @override
   void initState() {
     super.initState();
-    _fetchNewsHedlines(_defaultQuery, true);
+    _fetchNewsHeadlines(_defaultQuery, true);
   }
 
 ```
@@ -382,7 +382,7 @@ Widget _buildAppBar(BuildContext context) {
               prefixIcon: new Icon(Icons.search), hintText: 'Search...'),
           onSubmitted: (data) {
             if (data != null && data.isNotEmpty) {
-              _fetchNewsHedlines(data, true);
+              _fetchNewsHeadlines(data, true);
               this._searchIcon = new Icon(Icons.search);
               this._appBarTitle = new Text('News Headlines');
               _filter.clear();

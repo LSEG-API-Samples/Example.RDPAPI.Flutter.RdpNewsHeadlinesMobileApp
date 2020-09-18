@@ -99,7 +99,8 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
     switch (index) {
       case 0: // Home
         newsContentList.clear();
-        _fetchNewsHedlines('(R:AAPL.O or R:MSFT.O or R:AMZN.O) and L:EN', true);
+        _fetchNewsHeadlines(
+            '(R:AAPL.O or R:MSFT.O or R:AMZN.O) and L:EN', true);
 
         break;
       case 1: // More news
@@ -137,7 +138,7 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
         content: Text('Loading more news...'),
       ));
       print('Next =>${this.nextCursor}');
-      _fetchNewsHedlines(_keyword, false, true, this.nextCursor);
+      _fetchNewsHeadlines(_keyword, false, true, this.nextCursor);
       widget._scaffoldKey.currentState.hideCurrentSnackBar();
     }
   }
@@ -169,7 +170,7 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
               prefixIcon: new Icon(Icons.search), hintText: 'Search...'),
           onSubmitted: (data) {
             if (data != null && data.isNotEmpty) {
-              _fetchNewsHedlines(data, true);
+              _fetchNewsHeadlines(data, true);
               this._searchIcon = new Icon(Icons.search);
               this._appBarTitle = new Text('News Headlines');
               _filter.clear();
@@ -187,10 +188,10 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
   @override
   void initState() {
     super.initState();
-    _fetchNewsHedlines(_defaultQuery, true);
+    _fetchNewsHeadlines(_defaultQuery, true);
   }
 
-  void _fetchNewsHedlines(String keyword, bool clearList,
+  void _fetchNewsHeadlines(String keyword, bool clearList,
       [bool useCursor, String nextCursor]) async {
     this._keyword = keyword;
     if (clearList) newsContentList.clear();
