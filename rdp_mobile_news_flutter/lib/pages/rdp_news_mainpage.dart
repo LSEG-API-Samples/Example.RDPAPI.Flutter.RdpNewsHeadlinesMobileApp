@@ -28,7 +28,7 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
   String _keyword;
   String nextCursor;
   BottomNavigationBarItem expandMoreItem =
-      BottomNavigationBarItem(icon: Icon(Icons.expand_more), title: Text(''));
+      BottomNavigationBarItem(icon: Icon(Icons.expand_more), label: '');
   bool expandMoreHeadlines = false;
   final FocusNode _searchBarFocusNode = new FocusNode();
   final String _defaultQuery =
@@ -49,7 +49,7 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
                         setState(() {
                           expandMoreHeadlines = false;
                           expandMoreItem = BottomNavigationBarItem(
-                              icon: Icon(Icons.expand_more), title: Text(''));
+                              icon: Icon(Icons.expand_more), label: '');
                         });
                         _fetchMoreHeadlines();
                       }
@@ -79,12 +79,12 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          title: Text('Home'),
+          label: 'Home',
         ),
         expandMoreItem,
         BottomNavigationBarItem(
           icon: Icon(Icons.exit_to_app),
-          title: Text('Logout'),
+          label: 'Logout',
         ),
       ],
       backgroundColor: Color(0xFF001EFF),
@@ -126,7 +126,7 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
         expandMoreHeadlines = true;
         expandMoreItem = BottomNavigationBarItem(
           icon: Icon(Icons.expand_more),
-          title: Text('More Headlines'),
+          label: 'More Headlines',
         );
       });
     }
@@ -236,8 +236,8 @@ class _RdpNewsMainPage extends State<RdpNewsMainPage> {
         } else {
           setState(() {
             expandMoreHeadlines = false;
-            expandMoreItem = BottomNavigationBarItem(
-                icon: Icon(Icons.more_vert), title: Text(''));
+            expandMoreItem =
+                BottomNavigationBarItem(icon: Icon(Icons.more_vert), label: '');
           });
         }
       } else {
