@@ -13,4 +13,4 @@ It's the project under folder [rdp_mobile_news_flutter](rdp_mobile_news_flutter/
 
 For the full article, please visit the following articles:
 - [Build News Headlines Mobile app using Flutter and Data Platform API (Part1)](https://developers.lseg.com/en/article-catalog/article/build-news-headlines-mobile-app-using-flutter-and-rdp-part1)
-- [Build News Headlines Mobile app using Flutter and Data Platform API (Part 2)](https://developers.lseg.com/en/article-catalog/article/build-news-headlines-mobile-app-using-flutter-and-rdpapi-part-2).
+- [Build News Headlines Mobile app using Flutter and Data Platform API (Part 2)](https://developers.lseg.com/en/article-catalog/article/build-news-headlines-mobile-app-using-flutter-and-rdpapi-part-2)
